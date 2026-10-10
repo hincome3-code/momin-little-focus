@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MOM IN Little Focus</title>
+<meta name="description" content="40 double-sided high-contrast baby cards with 80 bold black, white and red designs for babies 0–6 months. Made in India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: the page is the two sides of a card — light theme is the black-on-white side,
+   dark theme the white-on-black side. Red appears only where the Fruits & Red set does. */
+:root{
+  --paper:#ffffff; --ink:#0d0d0d; --muted:#55524d; --line:#dedad3; --tint:#f4f1ec;
+  --red:#d7262e; --band:#0d0d0d; --band-ink:#ffffff;
+  --display:Fredoka,'Arial Rounded MT Bold','Trebuchet MS',sans-serif;
+  --body:'Atkinson Hyperlegible','Segoe UI',system-ui,sans-serif;
+  --r:14px; --max:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0b0b0b; --ink:#f7f5f2; --muted:#b4afa7; --line:#2b2a28; --tint:#161514;
+  --red:#ff4b52; --band:#f7f5f2; --band-ink:#0b0b0b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0b0b0b; --ink:#f7f5f2; --muted:#b4afa7; --line:#2b2a28; --tint:#161514;
+  --red:#ff4b52; --band:#f7f5f2; --band-ink:#0b0b0b; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+img{height:auto}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.5rem,6.2vw,4.6rem);letter-spacing:-.015em}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);letter-spacing:-.01em}
+h3{font-size:1.25rem}
+p{margin:0;max-width:62ch}
+.eyebrow{font:700 .78rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+section{padding-block:clamp(56px,9vw,104px)}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:42px;height:auto}
+.brand b{font:700 1.3rem/1 var(--display);letter-spacing:.04em}
+.brand small{display:block;font:600 .8rem/1.2 var(--display);color:var(--muted)}
+.top nav{display:flex;gap:20px;align-items:center}
+.top nav a{text-decoration:none;font-weight:700;font-size:.95rem}
+.top nav a.hide-sm{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 26px;border-radius:999px;
+  font:600 1.05rem/1 var(--display);text-decoration:none;border:2px solid var(--ink);cursor:pointer}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.top .btn{min-height:40px;padding:0 18px;font-size:.95rem}
+
+/* Hero */
+.hero{padding-block:clamp(40px,7vw,80px) clamp(48px,8vw,96px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero .copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero .lede{font-size:1.2rem;color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.facts li{border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.92rem;font-variant-numeric:tabular-nums}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.stage{position:relative;aspect-ratio:1/1;max-width:100%;overflow:visible}
+.flip,.face{min-width:0}
+.stage .box{position:absolute;left:2%;top:4%;width:56%;border-radius:10px;mix-blend-mode:multiply}
+:root[data-theme="dark"] .stage .box{mix-blend-mode:normal;background:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .stage .box{mix-blend-mode:normal;background:#fff}}
+.stage .c{position:absolute;width:30%;aspect-ratio:2/3;border-radius:10px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.22),0 0 0 1px rgba(0,0,0,.08)}
+.stage .c svg{display:block;width:100%;height:100%}
+.stage .c1{right:8%;top:6%;transform:rotate(7deg)}
+.stage .c2{right:0;top:38%;transform:rotate(14deg)}
+.stage .c3{right:22%;top:60%;transform:rotate(-5deg)}
+@media (prefers-reduced-motion: no-preference){
+  .stage .c{animation:deal .7s cubic-bezier(.2,.8,.2,1) both}
+  .stage .c1{animation-delay:.1s}.stage .c2{animation-delay:.22s}.stage .c3{animation-delay:.34s}
+  @keyframes deal{from{translate:0 18px;opacity:.4}to{translate:0 0;opacity:1}}
+}
+
+/* Contrast band */
+.band{background:var(--band);color:var(--band-ink)}
+.band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,48px)}
+.band .eyebrow{color:inherit;opacity:.7}
+.why{display:flex;flex-direction:column;gap:10px;min-width:0}
+.why h3{font-size:1.5rem}
+.why p{opacity:.85}
+.band-head{grid-column:1/-1;display:flex;flex-direction:column;gap:12px;margin-bottom:8px}
+
+/* Deck */
+.deck-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+.deck-head .copy{display:flex;flex-direction:column;gap:12px;min-width:0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tab{font:600 1rem/1 var(--display);padding:12px 18px;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tab:last-child[aria-selected="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.deck{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,22px)}
+.flip{position:relative;aspect-ratio:2/3;border:0;padding:0;background:none;cursor:pointer;perspective:1200px;border-radius:12px}
+.face{position:absolute;inset:0;border-radius:12px;overflow:hidden;backface-visibility:hidden;transition:transform .55s cubic-bezier(.3,.7,.2,1);
+  box-shadow:0 8px 20px rgba(0,0,0,.14),0 0 0 1px var(--line)}
+.face svg{display:block;width:100%;height:100%}
+.face.back{transform:rotateY(180deg)}
+.flip[aria-pressed="true"] .front{transform:rotateY(-180deg)}
+.flip[aria-pressed="true"] .back{transform:rotateY(0)}
+@media (prefers-reduced-motion: reduce){.face{transition:none}}
+.deck-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:22px;color:var(--muted);font-size:.95rem}
+.linkbtn{font:700 .95rem var(--body);background:none;border:0;color:var(--ink);text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:8px 0}
+
+/* How to */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.split img{width:100%;border-radius:var(--r);display:block}
+.steps{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:20px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:600 1.3rem var(--display)}
+.steps b{display:block;font:600 1.15rem/1.3 var(--display);margin-bottom:2px}
+.steps span{color:var(--muted)}
+.copycol{display:flex;flex-direction:column;gap:14px;min-width:0}
+
+/* Specs */
+.specs{background:var(--tint)}
+.spec-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:32px}
+.spec{background:var(--paper);padding:24px 22px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.spec .v{font:600 2rem/1.05 var(--display);font-variant-numeric:tabular-nums}
+.spec .k{color:var(--muted);font-size:.95rem}
+.inbox{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);margin-top:48px;align-items:center}
+.inbox img{width:100%;border-radius:var(--r);display:block}
+.ticks{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:12px}
+.ticks li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
+.ticks li::before{content:"";width:22px;height:22px;margin-top:3px;border-radius:50%;background:var(--ink);
+  -webkit-mask:radial-gradient(circle,#000 0 4px,transparent 5px 7px,#000 8px);mask:radial-gradient(circle,#000 0 4px,transparent 5px 7px,#000 8px)}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,64px)}
+details{border-bottom:1px solid var(--line);padding-block:18px}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font:600 1.15rem/1.35 var(--display);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted)}
+
+/* Order */
+.order .card{background:var(--band);color:var(--band-ink);border-radius:24px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.order .card p{opacity:.85}
+.order .card .btn{border-color:var(--band-ink);background:var(--band-ink);color:var(--band)}
+.order .mini{display:flex;gap:10px;justify-content:center}
+.order .mini span{width:30%;aspect-ratio:2/3;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px rgba(127,127,127,.35)}
+.order .mini span svg{display:block;width:100%;height:100%}
+.order .mini span:nth-child(1){transform:rotate(-6deg)}.order .mini span:nth-child(3){transform:rotate(6deg)}
+.note{font-size:.9rem;opacity:.75}
+
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:860px){
+  .hero .wrap,.split,.inbox,.faq,.order .card{grid-template-columns:minmax(0,1fr)}
+  .band .wrap{grid-template-columns:minmax(0,1fr)}
+  .spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .deck{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hide-sm{display:none}
+  .split img{order:-1}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="MOM IN Little Focus home"><svg viewBox="-420 -330 840 600" aria-hidden="true">
+      <path d="M-360 230 L300 230 Q390 230 390 140 L390 -60 Q390 -130 325 -130 Q260 -130 260 -60 L260 140 L-300 140 Q-360 150 -360 230 Z" style="fill:var(--ink)"/>
+      <path d="M290 -120 L245 -270 M360 -120 L400 -270" style="stroke:var(--ink)" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="242" cy="-280" r="30" style="fill:var(--ink)"/><circle cx="403" cy="-280" r="30" style="fill:var(--ink)"/>
+      <circle cx="335" cy="-50" r="20" style="fill:var(--paper)"/>
+      <circle cx="0" cy="-40" r="230" style="fill:var(--ink)" style="stroke:var(--paper)" stroke-width="20"/>
+      <path d="M5.4 3.7 L5.6 4.2 L5.8 4.7 L5.9 5.2 L6.0 5.7 L6.1 6.3 L6.1 6.8 L6.1 7.4 L6.1 8.0 L6.0 8.6 L5.9 9.2 L5.8 9.8 L5.6 10.4 L5.3 11.0 L5.1 11.6 L4.8 12.2 L4.4 12.8 L4.0 13.4 L3.6 14.0 L3.1 14.6 L2.6 15.1 L2.1 15.6 L1.5 16.1 L0.8 16.6 L0.2 17.1 L-0.5 17.5 L-1.2 17.9 L-2.0 18.3 L-2.8 18.6 L-3.6 18.9 L-4.5 19.2 L-5.4 19.4 L-6.3 19.6 L-7.2 19.7 L-8.1 19.8 L-9.1 19.9 L-10.1 19.9 L-11.1 19.9 L-12.1 19.8 L-13.1 19.6 L-14.2 19.5 L-15.2 19.2 L-16.2 18.9 L-17.3 18.6 L-18.3 18.2 L-19.4 17.7 L-20.4 17.2 L-21.4 16.7 L-22.4 16.1 L-23.4 15.4 L-24.4 14.7 L-25.3 13.9 L-26.3 13.1 L-27.2 12.2 L-28.0 11.2 L-28.9 10.3 L-29.7 9.2 L-30.4 8.1 L-31.2 7.0 L-31.9 5.8 L-32.5 4.6 L-33.1 3.4 L-33.6 2.1 L-34.1 0.7 L-34.6 -0.6 L-35.0 -2.0 L-35.3 -3.5 L-35.5 -5.0 L-35.8 -6.4 L-35.9 -8.0 L-36.0 -9.5 L-36.0 -11.1 L-35.9 -12.6 L-35.8 -14.2 L-35.6 -15.8 L-35.3 -17.4 L-35.0 -19.0 L-34.6 -20.6 L-34.1 -22.3 L-33.5 -23.9 L-32.9 -25.4 L-32.2 -27.0 L-31.4 -28.6 L-30.5 -30.1 L-29.6 -31.6 L-28.6 -33.1 L-27.5 -34.6 L-26.4 -36.0 L-25.2 -37.4 L-23.9 -38.7 L-22.5 -40.1 L-21.1 -41.3 L-19.6 -42.5 L-18.1 -43.7 L-16.5 -44.8 L-14.8 -45.8 L-13.1 -46.8 L-11.3 -47.7 L-9.5 -48.5 L-7.6 -49.3 L-5.6 -50.0 L-3.7 -50.6 L-1.7 -51.2 L0.4 -51.6 L2.5 -52.0 L4.6 -52.3 L6.7 -52.5 L8.9 -52.6 L11.1 -52.7 L13.3 -52.6 L15.5 -52.5 L17.7 -52.2 L20.0 -51.9 L22.2 -51.4 L24.4 -50.9 L26.7 -50.3 L28.9 -49.5 L31.1 -48.7 L33.2 -47.8 L35.4 -46.8 L37.5 -45.7 L39.6 -44.5 L41.6 -43.1 L43.6 -41.7 L45.6 -40.3 L47.5 -38.7 L49.4 -37.0 L51.2 -35.3 L52.9 -33.4 L54.6 -31.5 L56.2 -29.5 L57.7 -27.4 L59.2 -25.2 L60.6 -23.0 L61.8 -20.7 L63.0 -18.3 L64.1 -15.9 L65.2 -13.4 L66.1 -10.9 L66.9 -8.3 L67.6 -5.6 L68.2 -2.9 L68.7 -0.2 L69.1 2.5 L69.4 5.3 L69.6 8.2 L69.6 11.0 L69.5 13.9 L69.4 16.7 L69.0 19.6 L68.6 22.5 L68.1 25.4 L67.4 28.2 L66.6 31.1 L65.7 33.9 L64.7 36.8 L63.5 39.6 L62.3 42.3 L60.9 45.0 L59.4 47.7 L57.7 50.3 L56.0 52.9 L54.1 55.4 L52.2 57.8 L50.1 60.2 L47.9 62.5 L45.6 64.8 L43.3 66.9 L40.8 68.9 L38.2 70.9 L35.5 72.8 L32.7 74.5 L29.9 76.2 L27.0 77.7 L24.0 79.2 L20.9 80.5 L17.8 81.7 L14.5 82.8 L11.3 83.7 L8.0 84.5 L4.6 85.2 L1.2 85.8 L-2.2 86.2 L-5.7 86.5 L-9.2 86.6 L-12.7 86.6 L-16.3 86.5 L-19.8 86.2 L-23.4 85.7 L-26.9 85.1 L-30.4 84.4 L-33.9 83.5 L-37.4 82.5 L-40.9 81.3 L-44.3 80.0 L-47.7 78.5 L-51.1 76.9 L-54.4 75.2 L-57.6 73.3 L-60.8 71.3 L-63.9 69.1 L-66.9 66.8 L-69.8 64.4 L-72.7 61.8 L-75.4 59.1 L-78.1 56.3 L-80.7 53.4 L-83.1 50.4 L-85.4 47.2 L-87.6 43.9 L-89.7 40.6 L-91.7 37.1 L-93.5 33.6 L-95.2 29.9 L-96.7 26.2 L-98.1 22.4 L-99.4 18.6 L-100.5 14.6 L-101.4 10.7 L-102.2 6.6 L-102.8 2.5 L-103.3 -1.6 L-103.6 -5.7 L-103.7 -9.9 L-103.6 -14.1 L-103.4 -18.3 L-103.0 -22.5 L-102.5 -26.7 L-101.8 -30.9 L-100.8 -35.1 L-99.8 -39.3 L-98.5 -43.4 L-97.1 -47.5 L-95.5 -51.6 L-93.7 -55.6 L-91.8 -59.5 L-89.7 -63.4 L-87.5 -67.2 L-85.0 -70.9 L-82.5 -74.6 L-79.7 -78.1 L-76.8 -81.6 L-73.8 -84.9 L-70.6 -88.1 L-67.3 -91.2 L-63.8 -94.2 L-60.3 -97.1 L-56.5 -99.8 L-52.7 -102.3 L-48.8 -104.8 L-44.7 -107.0 L-40.5 -109.1 L-36.3 -111.1 L-31.9 -112.9 L-27.5 -114.5 L-23.0 -115.9 L-18.4 -117.2 L-13.7 -118.3 L-9.0 -119.1 L-4.3 -119.8 L0.5 -120.4 L5.4 -120.7 L10.2 -120.8 L15.1 -120.7 L20.0 -120.5 L24.9 -120.0 L29.8 -119.3 L34.6 -118.5 L39.5 -117.4 L44.3 -116.1 L49.1 -114.7 L53.8 -113.0 L58.5 -111.2 L63.1 -109.1 L67.7 -106.9 L72.1 -104.4 L76.5 -101.8 L80.8 -99.0 L85.0 -96.0 L89.1 -92.9 L93.0 -89.5 L96.9 -86.0 L100.6 -82.4 L104.1 -78.6 L107.5 -74.6 L110.8 -70.5 L113.9 -66.2 L116.9 -61.8 L119.6 -57.2 L122.2 -52.6 L124.6 -47.8 L126.9 -42.9 L128.9 -38.0 L130.7 -32.9 L132.4 -27.7 L133.8 -22.5 L135.0 -17.2 L136.0 -11.8 L136.8 -6.4 L137.4 -0.9 L137.8 4.6 L137.9 10.2 L137.8 15.7 L137.5 21.3 L137.0 26.9 L136.3 32.4 L135.3 38.0 L134.1 43.5 L132.6 49.0 L131.0 54.4 L129.1 59.8 L127.0 65.1 L124.7 70.3 L122.1 75.5 L119.4 80.5 L116.4 85.5 L113.2 90.4 L109.9 95.1 L106.3 99.7 L102.5 104.2 L98.6 108.6 L94.4 112.7 L90.1 116.8 L85.6 120.6 L81.0 124.3 L76.1 127.9 L71.2 131.2 L66.1 134.3 L60.8 137.2 L55.4 140.0 L50.0 142.5 L44.3 144.8 L38.6 146.9 L32.8 148.7 L26.9 150.4 L20.9 151.7 L14.9 152.9 L8.8 153.8 L2.7 154.5 L-3.5 154.9 L-9.8 155.1 L-16.0 155.0 L-22.2 154.7 L-28.5 154.1 L-34.7 153.2 L-40.9 152.2 L-47.1 150.8 L-53.3 149.2 L-59.3 147.4 L-65.4 145.3 L-71.3 142.9 L-77.2 140.4 L-83.0 137.5 L-88.6 134.5 L-94.2 131.2 L-99.7 127.6 L-105.0 123.9 L-110.1 119.9 L-115.1 115.7 L-120.0 111.3 L-124.7 106.7 L-129.2 101.9" fill="none" style="stroke:var(--paper)" stroke-width="34" stroke-linecap="round"/></svg><span><b>MOM IN</b><small>Little Focus</small></span></a>
+    <nav aria-label="Main">
+      <a class="hide-sm" href="#deck">The cards</a>
+      <a class="hide-sm" href="#how">How to use</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+      <a class="btn solid" href="#order">Order</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="copy">
+      <span class="eyebrow">High-contrast baby cards · 0–6 months</span>
+      <h1>Big, bold pictures for brand-new eyes.</h1>
+      <p class="lede">Little Focus is a deck of 40 thick, double-sided cards with 80 black, white and red designs. Each one is sized and shaped for the way a newborn sees.</p>
+      <ul class="facts" aria-label="Key facts">
+        <li>40 cards</li><li>80 designs</li><li>10 × 15 cm</li><li>Made in India</li>
+      </ul>
+      <div class="actions">
+        <a class="btn solid" href="#order">Order a set</a>
+        <a class="btn ghost" href="#deck">Flip through the cards</a>
+      </div>
+    </div>
+    <div class="stage" aria-label="The MOM IN Little Focus box with three cards">
+      <img class="box" src="img/box-photo.jpg" alt="Black MOM IN Little Focus box: High-contrast baby cards, 0–6 months" width="800" height="1170">
+      <span class="c c1"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><circle r="400" fill="#000"/><circle r="320" fill="#fff"/><circle r="240" fill="#000"/><circle r="160" fill="#fff"/><circle r="80" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">BULLSEYE</text>
+
+</svg></span>
+      <span class="c c2"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#000"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#fff"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">CHERRIES</text>
+
+</svg></span>
+      <span class="c c3"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <ellipse cx="-110" cy="-240" rx="80" ry="230" transform="rotate(-10 -110 -240)" fill="#000"/>
+      <ellipse cx="110" cy="-240" rx="80" ry="230" transform="rotate(10 110 -240)" fill="#000"/>
+      <ellipse cx="-110" cy="-250" rx="30" ry="150" transform="rotate(-10 -110 -250)" fill="#fff"/>
+      <ellipse cx="110" cy="-250" rx="30" ry="150" transform="rotate(10 110 -250)" fill="#fff"/>
+      <circle cx="0" cy="130" r="250" fill="#000"/>
+      <circle cx="-95" cy="90" r="34" fill="#fff"/><circle cx="95" cy="90" r="34" fill="#fff"/>
+      <ellipse cx="0" cy="170" rx="34" ry="24" fill="#fff"/>
+      <path d="M0 190 L0 225 M0 225 Q-35 260 -70 235 M0 225 Q35 260 70 235" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+      <path d="M-70 175 L-210 150 M-70 200 L-210 215 M70 175 L210 150 M70 200 L210 215" stroke="#fff" stroke-width="12" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">RABBIT</text>
+
+</svg></span>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="band-head">
+      <span class="eyebrow">Why black and white</span>
+      <h2 id="why-title">Newborns see strong contrast first.</h2>
+    </div>
+    <div class="why">
+      <h3>Bold edges</h3>
+      <p>In the first weeks, a baby's eyesight is blurry and colours are hard to tell apart. Sharp black-and-white shapes are the easiest things to find and follow.</p>
+    </div>
+    <div class="why">
+      <h3>Then red</h3>
+      <p>Red is one of the first colours babies pick out. Our Fruits &amp; Red set adds it to apples, cherries, zigzags and diamonds for the months ahead.</p>
+    </div>
+    <div class="why">
+      <h3>Time together</h3>
+      <p>The cards are made for you to hold, move and talk about. Each design has its name printed under it, so you always know what to say.</p>
+    </div>
+  </div>
+</section>
+
+<section id="deck" aria-labelledby="deck-title">
+  <div class="wrap">
+    <div class="deck-head">
+      <div class="copy">
+        <span class="eyebrow">Inside the box</span>
+        <h2 id="deck-title">80 designs. Tap any card to flip it.</h2>
+        <p>Five sets of eight cards. Every card has a different design on its back, in the opposite colours.</p>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Card sets"><button class="tab" type="button" role="tab" id="tab-A" aria-controls="set-A" aria-selected="true">Patterns</button><button class="tab" type="button" role="tab" id="tab-B" aria-controls="set-B" aria-selected="false">Animals</button><button class="tab" type="button" role="tab" id="tab-C" aria-controls="set-C" aria-selected="false">Familiar Things</button><button class="tab" type="button" role="tab" id="tab-D" aria-controls="set-D" aria-selected="false">Shapes</button><button class="tab" type="button" role="tab" id="tab-E" aria-controls="set-E" aria-selected="false">Fruits & Red</button></div>
+    <div class="deck" role="tabpanel" id="set-A" aria-labelledby="tab-A">
+<button class="flip" type="button" aria-pressed="false" aria-label="Bullseye. Tap to see the back: Diagonal Stripes">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><circle r="400" fill="#000"/><circle r="320" fill="#fff"/><circle r="240" fill="#000"/><circle r="160" fill="#fff"/><circle r="80" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">BULLSEYE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 780)"><g transform="rotate(45)"><rect x="-1100" y="-1100" width="90" height="2200" fill="#fff"/><rect x="-920" y="-1100" width="90" height="2200" fill="#fff"/><rect x="-740" y="-1100" width="90" height="2200" fill="#fff"/><rect x="-560" y="-1100" width="90" height="2200" fill="#fff"/><rect x="-380" y="-1100" width="90" height="2200" fill="#fff"/><rect x="-200" y="-1100" width="90" height="2200" fill="#fff"/><rect x="-20" y="-1100" width="90" height="2200" fill="#fff"/><rect x="160" y="-1100" width="90" height="2200" fill="#fff"/><rect x="340" y="-1100" width="90" height="2200" fill="#fff"/><rect x="520" y="-1100" width="90" height="2200" fill="#fff"/><rect x="700" y="-1100" width="90" height="2200" fill="#fff"/><rect x="880" y="-1100" width="90" height="2200" fill="#fff"/><rect x="1060" y="-1100" width="90" height="2200" fill="#fff"/></g></g><rect x="0" y="1235" width="1060" height="325" fill="#000"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff" textLength="860" lengthAdjust="spacingAndGlyphs">DIAGONAL STRIPES</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Checkerboard. Tap to see the back: Grid">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 780)"><rect x="-750" y="-1000" width="250" height="250" fill="#000"/><rect x="-750" y="-500" width="250" height="250" fill="#000"/><rect x="-750" y="0" width="250" height="250" fill="#000"/><rect x="-750" y="500" width="250" height="250" fill="#000"/><rect x="-500" y="-750" width="250" height="250" fill="#000"/><rect x="-500" y="-250" width="250" height="250" fill="#000"/><rect x="-500" y="250" width="250" height="250" fill="#000"/><rect x="-500" y="750" width="250" height="250" fill="#000"/><rect x="-250" y="-1000" width="250" height="250" fill="#000"/><rect x="-250" y="-500" width="250" height="250" fill="#000"/><rect x="-250" y="0" width="250" height="250" fill="#000"/><rect x="-250" y="500" width="250" height="250" fill="#000"/><rect x="0" y="-750" width="250" height="250" fill="#000"/><rect x="0" y="-250" width="250" height="250" fill="#000"/><rect x="0" y="250" width="250" height="250" fill="#000"/><rect x="0" y="750" width="250" height="250" fill="#000"/><rect x="250" y="-1000" width="250" height="250" fill="#000"/><rect x="250" y="-500" width="250" height="250" fill="#000"/><rect x="250" y="0" width="250" height="250" fill="#000"/><rect x="250" y="500" width="250" height="250" fill="#000"/><rect x="500" y="-750" width="250" height="250" fill="#000"/><rect x="500" y="-250" width="250" height="250" fill="#000"/><rect x="500" y="250" width="250" height="250" fill="#000"/><rect x="500" y="750" width="250" height="250" fill="#000"/></g><rect x="0" y="1235" width="1060" height="325" fill="#fff"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">CHECKERBOARD</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 780)"><rect x="-522" y="-800" width="44" height="1600" fill="#fff"/><rect x="-322" y="-800" width="44" height="1600" fill="#fff"/><rect x="-122" y="-800" width="44" height="1600" fill="#fff"/><rect x="78" y="-800" width="44" height="1600" fill="#fff"/><rect x="278" y="-800" width="44" height="1600" fill="#fff"/><rect x="478" y="-800" width="44" height="1600" fill="#fff"/><rect x="-600" y="-722" width="1200" height="44" fill="#fff"/><rect x="-600" y="-522" width="1200" height="44" fill="#fff"/><rect x="-600" y="-322" width="1200" height="44" fill="#fff"/><rect x="-600" y="-122" width="1200" height="44" fill="#fff"/><rect x="-600" y="78" width="1200" height="44" fill="#fff"/><rect x="-600" y="278" width="1200" height="44" fill="#fff"/><rect x="-600" y="478" width="1200" height="44" fill="#fff"/><rect x="-600" y="678" width="1200" height="44" fill="#fff"/></g><rect x="0" y="1235" width="1060" height="325" fill="#000"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">GRID</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Stripes. Tap to see the back: Triangles">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 780)"><rect x="-500" y="-800" width="100" height="1600" fill="#000"/><rect x="-300" y="-800" width="100" height="1600" fill="#000"/><rect x="-100" y="-800" width="100" height="1600" fill="#000"/><rect x="100" y="-800" width="100" height="1600" fill="#000"/><rect x="300" y="-800" width="100" height="1600" fill="#000"/><rect x="500" y="-800" width="100" height="1600" fill="#000"/></g><rect x="0" y="1235" width="1060" height="325" fill="#fff"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">STRIPES</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 780)"><polygon points="-700,-680 -600,-860 -500,-680" fill="#fff"/><polygon points="-500,-680 -400,-860 -300,-680" fill="#fff"/><polygon points="-300,-680 -200,-860 -100,-680" fill="#fff"/><polygon points="-100,-680 0,-860 100,-680" fill="#fff"/><polygon points="100,-680 200,-860 300,-680" fill="#fff"/><polygon points="300,-680 400,-860 500,-680" fill="#fff"/><polygon points="500,-680 600,-860 700,-680" fill="#fff"/><polygon points="-600,-460 -500,-640 -400,-460" fill="#fff"/><polygon points="-400,-460 -300,-640 -200,-460" fill="#fff"/><polygon points="-200,-460 -100,-640 0,-460" fill="#fff"/><polygon points="0,-460 100,-640 200,-460" fill="#fff"/><polygon points="200,-460 300,-640 400,-460" fill="#fff"/><polygon points="400,-460 500,-640 600,-460" fill="#fff"/><polygon points="600,-460 700,-640 800,-460" fill="#fff"/><polygon points="-700,-240 -600,-420 -500,-240" fill="#fff"/><polygon points="-500,-240 -400,-420 -300,-240" fill="#fff"/><polygon points="-300,-240 -200,-420 -100,-240" fill="#fff"/><polygon points="-100,-240 0,-420 100,-240" fill="#fff"/><polygon points="100,-240 200,-420 300,-240" fill="#fff"/><polygon points="300,-240 400,-420 500,-240" fill="#fff"/><polygon points="500,-240 600,-420 700,-240" fill="#fff"/><polygon points="-600,-20 -500,-200 -400,-20" fill="#fff"/><polygon points="-400,-20 -300,-200 -200,-20" fill="#fff"/><polygon points="-200,-20 -100,-200 0,-20" fill="#fff"/><polygon points="0,-20 100,-200 200,-20" fill="#fff"/><polygon points="200,-20 300,-200 400,-20" fill="#fff"/><polygon points="400,-20 500,-200 600,-20" fill="#fff"/><polygon points="600,-20 700,-200 800,-20" fill="#fff"/><polygon points="-700,200 -600,20 -500,200" fill="#fff"/><polygon points="-500,200 -400,20 -300,200" fill="#fff"/><polygon points="-300,200 -200,20 -100,200" fill="#fff"/><polygon points="-100,200 0,20 100,200" fill="#fff"/><polygon points="100,200 200,20 300,200" fill="#fff"/><polygon points="300,200 400,20 500,200" fill="#fff"/><polygon points="500,200 600,20 700,200" fill="#fff"/><polygon points="-600,420 -500,240 -400,420" fill="#fff"/><polygon points="-400,420 -300,240 -200,420" fill="#fff"/><polygon points="-200,420 -100,240 0,420" fill="#fff"/><polygon points="0,420 100,240 200,420" fill="#fff"/><polygon points="200,420 300,240 400,420" fill="#fff"/><polygon points="400,420 500,240 600,420" fill="#fff"/><polygon points="600,420 700,240 800,420" fill="#fff"/><polygon points="-700,640 -600,460 -500,640" fill="#fff"/><polygon points="-500,640 -400,460 -300,640" fill="#fff"/><polygon points="-300,640 -200,460 -100,640" fill="#fff"/><polygon points="-100,640 0,460 100,640" fill="#fff"/><polygon points="100,640 200,460 300,640" fill="#fff"/><polygon points="300,640 400,460 500,640" fill="#fff"/><polygon points="500,640 600,460 700,640" fill="#fff"/><polygon points="-600,860 -500,680 -400,860" fill="#fff"/><polygon points="-400,860 -300,680 -200,860" fill="#fff"/><polygon points="-200,860 -100,680 0,860" fill="#fff"/><polygon points="0,860 100,680 200,860" fill="#fff"/><polygon points="200,860 300,680 400,860" fill="#fff"/><polygon points="400,860 500,680 600,860" fill="#fff"/><polygon points="600,860 700,680 800,860" fill="#fff"/></g><rect x="0" y="1235" width="1060" height="325" fill="#000"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">TRIANGLES</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Striped Circle. Tap to see the back: Rays">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><clipPath id="ck4"><circle r="390"/></clipPath><g clip-path="url(#ck4)"><rect x="-400" y="-390" width="800" height="65" fill="#fff"/><rect x="-400" y="-260" width="800" height="65" fill="#fff"/><rect x="-400" y="-130" width="800" height="65" fill="#fff"/><rect x="-400" y="0" width="800" height="65" fill="#fff"/><rect x="-400" y="130" width="800" height="65" fill="#fff"/><rect x="-400" y="260" width="800" height="65" fill="#fff"/></g></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff" textLength="860" lengthAdjust="spacingAndGlyphs">STRIPED CIRCLE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 780)"><polygon points="0,0 1100.0,0.0 1016.3,421.0" fill="#000"/><polygon points="0,0 777.8,777.8 421.0,1016.3" fill="#000"/><polygon points="0,0 0.0,1100.0 -421.0,1016.3" fill="#000"/><polygon points="0,0 -777.8,777.8 -1016.3,421.0" fill="#000"/><polygon points="0,0 -1100.0,0.0 -1016.3,-421.0" fill="#000"/><polygon points="0,0 -777.8,-777.8 -421.0,-1016.3" fill="#000"/><polygon points="0,0 -0.0,-1100.0 421.0,-1016.3" fill="#000"/><polygon points="0,0 777.8,-777.8 1016.3,-421.0" fill="#000"/></g><rect x="0" y="1235" width="1060" height="325" fill="#fff"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">RAYS</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Spiral. Tap to see the back: Scales">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M10.0 6.8 L10.3 7.7 L10.7 8.6 L10.9 9.6 L11.1 10.6 L11.2 11.6 L11.3 12.6 L11.3 13.7 L11.2 14.8 L11.1 15.9 L10.9 17.0 L10.6 18.1 L10.3 19.2 L9.8 20.3 L9.3 21.4 L8.8 22.5 L8.1 23.6 L7.4 24.7 L6.6 25.8 L5.7 26.8 L4.8 27.8 L3.8 28.8 L2.7 29.7 L1.6 30.6 L0.3 31.4 L-0.9 32.2 L-2.3 33.0 L-3.7 33.7 L-5.2 34.3 L-6.7 34.8 L-8.2 35.3 L-9.9 35.8 L-11.5 36.1 L-13.2 36.4 L-15.0 36.6 L-16.8 36.7 L-18.6 36.7 L-20.4 36.6 L-22.3 36.5 L-24.2 36.2 L-26.1 35.9 L-28.0 35.4 L-29.9 34.9 L-31.9 34.2 L-33.8 33.5 L-35.7 32.7 L-37.6 31.7 L-39.4 30.7 L-41.3 29.6 L-43.1 28.4 L-44.9 27.0 L-46.7 25.6 L-48.4 24.1 L-50.0 22.4 L-51.6 20.7 L-53.2 18.9 L-54.7 17.0 L-56.1 15.0 L-57.4 12.9 L-58.7 10.8 L-59.9 8.5 L-61.0 6.2 L-62.0 3.8 L-62.9 1.4 L-63.7 -1.2 L-64.4 -3.8 L-65.0 -6.4 L-65.5 -9.1 L-65.9 -11.9 L-66.1 -14.7 L-66.3 -17.5 L-66.3 -20.4 L-66.2 -23.3 L-65.9 -26.2 L-65.6 -29.2 L-65.1 -32.1 L-64.5 -35.1 L-63.7 -38.0 L-62.8 -41.0 L-61.8 -43.9 L-60.6 -46.9 L-59.3 -49.8 L-57.8 -52.7 L-56.3 -55.5 L-54.6 -58.3 L-52.7 -61.0 L-50.7 -63.7 L-48.6 -66.3 L-46.4 -68.9 L-44.0 -71.4 L-41.5 -73.8 L-38.9 -76.1 L-36.2 -78.3 L-33.3 -80.5 L-30.3 -82.5 L-27.3 -84.4 L-24.1 -86.2 L-20.8 -87.9 L-17.4 -89.4 L-14.0 -90.9 L-10.4 -92.1 L-6.8 -93.3 L-3.1 -94.3 L0.7 -95.2 L4.6 -95.9 L8.5 -96.4 L12.4 -96.8 L16.4 -97.0 L20.4 -97.1 L24.5 -96.9 L28.6 -96.7 L32.7 -96.2 L36.8 -95.6 L40.9 -94.8 L45.0 -93.8 L49.1 -92.6 L53.2 -91.3 L57.2 -89.8 L61.2 -88.1 L65.2 -86.2 L69.1 -84.1 L72.9 -81.9 L76.7 -79.5 L80.4 -76.9 L84.0 -74.2 L87.6 -71.3 L91.0 -68.2 L94.3 -65.0 L97.5 -61.6 L100.6 -58.0 L103.5 -54.3 L106.4 -50.5 L109.0 -46.5 L111.6 -42.4 L113.9 -38.2 L116.1 -33.8 L118.2 -29.3 L120.0 -24.7 L121.7 -20.0 L123.2 -15.3 L124.6 -10.4 L125.7 -5.4 L126.6 -0.4 L127.3 4.7 L127.8 9.8 L128.1 15.0 L128.2 20.3 L128.1 25.5 L127.8 30.8 L127.2 36.1 L126.4 41.5 L125.4 46.8 L124.2 52.0 L122.8 57.3 L121.1 62.5 L119.2 67.7 L117.1 72.9 L114.7 77.9 L112.2 83.0 L109.4 87.9 L106.4 92.7 L103.2 97.4 L99.8 102.1 L96.1 106.6 L92.3 111.0 L88.3 115.2 L84.1 119.3 L79.7 123.2 L75.1 127.0 L70.3 130.6 L65.4 134.1 L60.3 137.3 L55.1 140.4 L49.7 143.2 L44.2 145.9 L38.5 148.3 L32.7 150.5 L26.8 152.5 L20.8 154.2 L14.7 155.7 L8.5 157.0 L2.2 158.0 L-4.1 158.8 L-10.5 159.3 L-17.0 159.6 L-23.5 159.6 L-30.0 159.3 L-36.5 158.7 L-43.0 157.9 L-49.6 156.9 L-56.1 155.5 L-62.5 153.9 L-69.0 152.0 L-75.4 149.8 L-81.7 147.4 L-87.9 144.7 L-94.1 141.8 L-100.2 138.5 L-106.1 135.1 L-112.0 131.3 L-117.7 127.3 L-123.2 123.1 L-128.7 118.6 L-133.9 113.9 L-139.0 108.9 L-143.9 103.8 L-148.6 98.4 L-153.1 92.8 L-157.4 87.0 L-161.5 81.0 L-165.3 74.8 L-168.9 68.4 L-172.3 61.9 L-175.4 55.2 L-178.2 48.3 L-180.8 41.3 L-183.1 34.2 L-185.1 27.0 L-186.9 19.7 L-188.3 12.2 L-189.4 4.7 L-190.3 -2.9 L-190.8 -10.5 L-191.1 -18.2 L-191.0 -26.0 L-190.6 -33.7 L-189.9 -41.5 L-188.8 -49.3 L-187.5 -57.0 L-185.8 -64.7 L-183.8 -72.4 L-181.5 -80.0 L-178.9 -87.6 L-176.0 -95.0 L-172.7 -102.4 L-169.2 -109.7 L-165.3 -116.8 L-161.1 -123.8 L-156.7 -130.7 L-151.9 -137.4 L-146.9 -143.9 L-141.6 -150.3 L-136.0 -156.4 L-130.1 -162.3 L-124.0 -168.1 L-117.6 -173.6 L-111.0 -178.8 L-104.2 -183.8 L-97.1 -188.5 L-89.8 -193.0 L-82.3 -197.2 L-74.7 -201.1 L-66.8 -204.7 L-58.8 -208.0 L-50.6 -210.9 L-42.3 -213.6 L-33.9 -215.9 L-25.3 -217.9 L-16.6 -219.5 L-7.9 -220.8 L1.0 -221.8 L9.9 -222.3 L18.8 -222.6 L27.8 -222.4 L36.8 -221.9 L45.8 -221.1 L54.8 -219.9 L63.8 -218.3 L72.7 -216.3 L81.6 -214.0 L90.4 -211.3 L99.2 -208.2 L107.8 -204.8 L116.3 -201.0 L124.7 -196.9 L132.9 -192.4 L141.0 -187.6 L148.9 -182.4 L156.6 -176.9 L164.1 -171.1 L171.4 -165.0 L178.4 -158.5 L185.3 -151.8 L191.8 -144.7 L198.1 -137.4 L204.1 -129.8 L209.9 -121.9 L215.3 -113.8 L220.4 -105.5 L225.2 -96.9 L229.6 -88.1 L233.7 -79.1 L237.5 -69.9 L240.9 -60.6 L243.9 -51.1 L246.5 -41.4 L248.8 -31.6 L250.7 -21.7 L252.1 -11.7 L253.2 -1.6 L253.9 8.5 L254.1 18.7 L254.0 29.0 L253.4 39.2 L252.4 49.5 L251.0 59.7 L249.2 69.9 L247.0 80.1 L244.3 90.2 L241.3 100.2 L237.8 110.1 L233.9 119.9 L229.7 129.6 L225.0 139.1 L219.9 148.4 L214.5 157.6 L208.6 166.5 L202.4 175.2 L195.8 183.7 L188.9 192.0 L181.6 200.0 L174.0 207.7 L166.0 215.2 L157.7 222.3 L149.2 229.1 L140.3 235.6 L131.1 241.7 L121.7 247.5 L112.1 252.9 L102.2 257.9 L92.0 262.5 L81.7 266.8 L71.2 270.6 L60.5 274.0 L49.6 277.0 L38.6 279.6 L27.5 281.7 L16.2 283.4 L4.9 284.6 L-6.5 285.4 L-18.0 285.7 L-29.5 285.6 L-41.0 284.9 L-52.5 283.9 L-64.0 282.3 L-75.4 280.3 L-86.8 277.9 L-98.1 274.9 L-109.3 271.5 L-120.4 267.7 L-131.4 263.4 L-142.2 258.6 L-152.9 253.4 L-163.3 247.8 L-173.6 241.7 L-183.6 235.2 L-193.4 228.3 L-202.9 220.9 L-212.1 213.2 L-221.1 205.1 L-229.7 196.6 L-238.0 187.8 L-246.0 178.6 L-253.6 169.1 L-260.9 159.2 L-267.7 149.0 L-274.2 138.6 L-280.3 127.8 L-285.9 116.8 L-291.1 105.6 L-295.9 94.1 L-300.2 82.4 L-304.0 70.5 L-307.4 58.5 L-310.3 46.2 L-312.7 33.9 L-314.6 21.4 L-316.0 8.8 L-316.9 -3.8 L-317.3 -16.5 L-317.2 -29.3 L-316.5 -42.0 L-315.4 -54.8 L-313.8 -67.5 L-311.6 -80.2 L-308.9 -92.9 L-305.7 -105.4 L-302.0 -117.8 L-297.8 -130.1 L-293.1 -142.3 L-287.8 -154.3 L-282.1 -166.1 L-275.9 -177.7 L-269.3 -189.0 L-262.2 -200.1 L-254.6 -211.0 L-246.5 -221.5 L-238.0 -231.8 L-229.1 -241.7 L-219.8 -251.3 L-210.1 -260.5 L-200.0 -269.3 L-189.5 -277.8 L-178.7 -285.8 L-167.5 -293.4 L-156.0 -300.6 L-144.2 -307.3 L-132.1 -313.6 L-119.8 -319.4 L-107.1 -324.7 L-94.3 -329.5 L-81.2 -333.8 L-68.0 -337.5 L-54.6 -340.8 L-41.0 -343.5 L-27.3 -345.7 L-13.5 -347.3 L0.4 -348.4 L14.4 -348.9 L28.4 -348.8 L42.4 -348.2 L56.4 -347.0 L70.4 -345.3 L84.4 -343.0 L98.3 -340.1 L112.0 -336.7 L125.7 -332.7 L139.2 -328.1 L152.6 -323.0 L165.7 -317.4 L178.7 -311.2 L191.4 -304.5 L203.9 -297.2 L216.1 -289.5 L228.0 -281.3 L239.6 -272.5 L250.9 -263.3 L261.8 -253.6 L272.3 -243.5 L282.5 -232.9 L292.2 -221.9 L301.5 -210.5 L310.3 -198.7 L318.7 -186.6 L326.7 -174.0 L334.1 -161.2 L341.0 -148.0 L347.4 -134.6 L353.3 -120.8 L358.6 -106.8 L363.4 -92.6 L367.6 -78.2 L371.2 -63.5 L374.2 -48.8 L376.7 -33.8 L378.5 -18.8 L379.8 -3.6" fill="none" stroke="#fff" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">SPIRAL</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 780)"><circle cx="-700" cy="-860" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="-860" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="-860" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="-860" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="-860" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="-860" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="-860" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="-750" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="-750" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="-750" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="-750" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="-750" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="-750" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="-640" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="-640" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="-640" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="-640" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="-640" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="-640" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="-640" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="-530" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="-530" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="-530" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="-530" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="-530" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="-530" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="-420" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="-420" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="-420" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="-420" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="-420" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="-420" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="-420" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="-310" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="-310" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="-310" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="-310" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="-310" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="-310" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="-200" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="-200" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="-200" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="-200" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="-200" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="-200" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="-200" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="-90" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="-90" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="-90" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="-90" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="-90" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="-90" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="20" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="20" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="20" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="20" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="20" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="20" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="20" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="130" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="130" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="130" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="130" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="130" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="130" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="240" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="240" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="240" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="240" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="240" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="240" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="240" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="350" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="350" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="350" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="350" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="350" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="350" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="460" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="460" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="460" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="460" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="460" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="460" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="460" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="570" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="570" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="570" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="570" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="570" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="570" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="680" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="680" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="680" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="680" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="680" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="680" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="680" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-590" cy="790" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-370" cy="790" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-150" cy="790" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="70" cy="790" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="290" cy="790" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="510" cy="790" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-700" cy="900" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-480" cy="900" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-260" cy="900" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="-40" cy="900" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="180" cy="900" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="400" cy="900" r="120" fill="#000" stroke="#fff" stroke-width="22"/><circle cx="620" cy="900" r="120" fill="#000" stroke="#fff" stroke-width="22"/></g><rect x="0" y="1235" width="1060" height="325" fill="#fff"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">SCALES</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Zigzag. Tap to see the back: Plus Signs">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 780)"><polyline points="-600,-705 -475,-815 -350,-705 -225,-815 -100,-705 25,-815 150,-705 275,-815 400,-705 525,-815" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/><polyline points="-600,-505 -475,-615 -350,-505 -225,-615 -100,-505 25,-615 150,-505 275,-615 400,-505 525,-615" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/><polyline points="-600,-305 -475,-415 -350,-305 -225,-415 -100,-305 25,-415 150,-305 275,-415 400,-305 525,-415" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/><polyline points="-600,-105 -475,-215 -350,-105 -225,-215 -100,-105 25,-215 150,-105 275,-215 400,-105 525,-215" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/><polyline points="-600,95 -475,-15 -350,95 -225,-15 -100,95 25,-15 150,95 275,-15 400,95 525,-15" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/><polyline points="-600,295 -475,185 -350,295 -225,185 -100,295 25,185 150,295 275,185 400,295 525,185" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/><polyline points="-600,495 -475,385 -350,495 -225,385 -100,495 25,385 150,495 275,385 400,495 525,385" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/><polyline points="-600,695 -475,585 -350,695 -225,585 -100,695 25,585 150,695 275,585 400,695 525,585" fill="none" stroke="#000" stroke-width="70" stroke-linejoin="miter"/></g><rect x="0" y="1235" width="1060" height="325" fill="#fff"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">ZIGZAG</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 780)"><path d="M-450 -625 H-300 M-375 -700 V-550" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-200 -625 H-50 M-125 -700 V-550" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M50 -625 H200 M125 -700 V-550" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M300 -625 H450 M375 -700 V-550" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-325 -375 H-175 M-250 -450 V-300" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-75 -375 H75 M0 -450 V-300" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M175 -375 H325 M250 -450 V-300" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M425 -375 H575 M500 -450 V-300" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-450 -125 H-300 M-375 -200 V-50" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-200 -125 H-50 M-125 -200 V-50" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M50 -125 H200 M125 -200 V-50" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M300 -125 H450 M375 -200 V-50" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-325 125 H-175 M-250 50 V200" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-75 125 H75 M0 50 V200" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M175 125 H325 M250 50 V200" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M425 125 H575 M500 50 V200" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-450 375 H-300 M-375 300 V450" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-200 375 H-50 M-125 300 V450" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M50 375 H200 M125 300 V450" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M300 375 H450 M375 300 V450" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-325 625 H-175 M-250 550 V700" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M-75 625 H75 M0 550 V700" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M175 625 H325 M250 550 V700" stroke="#fff" stroke-width="55" stroke-linecap="round"/><path d="M425 625 H575 M500 550 V700" stroke="#fff" stroke-width="55" stroke-linecap="round"/></g><rect x="0" y="1235" width="1060" height="325" fill="#000"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">PLUS SIGNS</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Dots. Tap to see the back: Ring of Dots">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.8)"><circle cx="-290" cy="-560" r="105" fill="#fff"/><circle cx="-290" cy="-280" r="105" fill="#fff"/><circle cx="-290" cy="0" r="105" fill="#fff"/><circle cx="-290" cy="280" r="105" fill="#fff"/><circle cx="-290" cy="560" r="105" fill="#fff"/><circle cx="0" cy="-560" r="105" fill="#fff"/><circle cx="0" cy="-280" r="105" fill="#fff"/><circle cx="0" cy="0" r="105" fill="#fff"/><circle cx="0" cy="280" r="105" fill="#fff"/><circle cx="0" cy="560" r="105" fill="#fff"/><circle cx="290" cy="-560" r="105" fill="#fff"/><circle cx="290" cy="-280" r="105" fill="#fff"/><circle cx="290" cy="0" r="105" fill="#fff"/><circle cx="290" cy="280" r="105" fill="#fff"/><circle cx="290" cy="560" r="105" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">DOTS</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><circle r="130" fill="#000"/><circle cx="330.0" cy="0.0" r="58" fill="#000"/><circle cx="285.8" cy="165.0" r="58" fill="#000"/><circle cx="165.0" cy="285.8" r="58" fill="#000"/><circle cx="0.0" cy="330.0" r="58" fill="#000"/><circle cx="-165.0" cy="285.8" r="58" fill="#000"/><circle cx="-285.8" cy="165.0" r="58" fill="#000"/><circle cx="-330.0" cy="0.0" r="58" fill="#000"/><circle cx="-285.8" cy="-165.0" r="58" fill="#000"/><circle cx="-165.0" cy="-285.8" r="58" fill="#000"/><circle cx="-0.0" cy="-330.0" r="58" fill="#000"/><circle cx="165.0" cy="-285.8" r="58" fill="#000"/><circle cx="285.8" cy="-165.0" r="58" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">RING OF DOTS</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Waves. Tap to see the back: Ripples">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 780)"><path d="M-350.3 -820 L-352.4 -810 L-356.7 -800 L-362.8 -790 L-370.6 -780 L-379.7 -770 L-389.6 -760 L-400.0 -750 L-410.4 -740 L-420.3 -730 L-429.4 -720 L-437.2 -710 L-443.3 -700 L-447.6 -690 L-449.7 -680 L-449.7 -670 L-447.6 -660 L-443.3 -650 L-437.2 -640 L-429.4 -630 L-420.3 -620 L-410.4 -610 L-400.0 -600 L-389.6 -590 L-379.7 -580 L-370.6 -570 L-362.8 -560 L-356.7 -550 L-352.4 -540 L-350.3 -530 L-350.3 -520 L-352.4 -510 L-356.7 -500 L-362.8 -490 L-370.6 -480 L-379.7 -470 L-389.6 -460 L-400.0 -450 L-410.4 -440 L-420.3 -430 L-429.4 -420 L-437.2 -410 L-443.3 -400 L-447.6 -390 L-449.7 -380 L-449.7 -370 L-447.6 -360 L-443.3 -350 L-437.2 -340 L-429.4 -330 L-420.3 -320 L-410.4 -310 L-400.0 -300 L-389.6 -290 L-379.7 -280 L-370.6 -270 L-362.8 -260 L-356.7 -250 L-352.4 -240 L-350.3 -230 L-350.3 -220 L-352.4 -210 L-356.7 -200 L-362.8 -190 L-370.6 -180 L-379.7 -170 L-389.6 -160 L-400.0 -150 L-410.4 -140 L-420.3 -130 L-429.4 -120 L-437.2 -110 L-443.3 -100 L-447.6 -90 L-449.7 -80 L-449.7 -70 L-447.6 -60 L-443.3 -50 L-437.2 -40 L-429.4 -30 L-420.3 -20 L-410.4 -10 L-400.0 0 L-389.6 10 L-379.7 20 L-370.6 30 L-362.8 40 L-356.7 50 L-352.4 60 L-350.3 70 L-350.3 80 L-352.4 90 L-356.7 100 L-362.8 110 L-370.6 120 L-379.7 130 L-389.6 140 L-400.0 150 L-410.4 160 L-420.3 170 L-429.4 180 L-437.2 190 L-443.3 200 L-447.6 210 L-449.7 220 L-449.7 230 L-447.6 240 L-443.3 250 L-437.2 260 L-429.4 270 L-420.3 280 L-410.4 290 L-400.0 300 L-389.6 310 L-379.7 320 L-370.6 330 L-362.8 340 L-356.7 350 L-352.4 360 L-350.3 370 L-350.3 380 L-352.4 390 L-356.7 400 L-362.8 410 L-370.6 420 L-379.7 430 L-389.6 440 L-400.0 450 L-410.4 460 L-420.3 470 L-429.4 480 L-437.2 490 L-443.3 500 L-447.6 510 L-449.7 520 L-449.7 530 L-447.6 540 L-443.3 550 L-437.2 560 L-429.4 570 L-420.3 580 L-410.4 590 L-400.0 600 L-389.6 610 L-379.7 620 L-370.6 630 L-362.8 640 L-356.7 650 L-352.4 660 L-350.3 670 L-350.3 680 L-352.4 690 L-356.7 700 L-362.8 710 L-370.6 720 L-379.7 730 L-389.6 740 L-400.0 750 L-410.4 760 L-420.3 770 L-429.4 780 L-437.2 790 L-443.3 800 L-447.6 810 L-449.7 820" fill="none" stroke="#000" stroke-width="90"/><path d="M-150.3 -820 L-152.4 -810 L-156.7 -800 L-162.8 -790 L-170.6 -780 L-179.7 -770 L-189.6 -760 L-200.0 -750 L-210.4 -740 L-220.3 -730 L-229.4 -720 L-237.2 -710 L-243.3 -700 L-247.6 -690 L-249.7 -680 L-249.7 -670 L-247.6 -660 L-243.3 -650 L-237.2 -640 L-229.4 -630 L-220.3 -620 L-210.4 -610 L-200.0 -600 L-189.6 -590 L-179.7 -580 L-170.6 -570 L-162.8 -560 L-156.7 -550 L-152.4 -540 L-150.3 -530 L-150.3 -520 L-152.4 -510 L-156.7 -500 L-162.8 -490 L-170.6 -480 L-179.7 -470 L-189.6 -460 L-200.0 -450 L-210.4 -440 L-220.3 -430 L-229.4 -420 L-237.2 -410 L-243.3 -400 L-247.6 -390 L-249.7 -380 L-249.7 -370 L-247.6 -360 L-243.3 -350 L-237.2 -340 L-229.4 -330 L-220.3 -320 L-210.4 -310 L-200.0 -300 L-189.6 -290 L-179.7 -280 L-170.6 -270 L-162.8 -260 L-156.7 -250 L-152.4 -240 L-150.3 -230 L-150.3 -220 L-152.4 -210 L-156.7 -200 L-162.8 -190 L-170.6 -180 L-179.7 -170 L-189.6 -160 L-200.0 -150 L-210.4 -140 L-220.3 -130 L-229.4 -120 L-237.2 -110 L-243.3 -100 L-247.6 -90 L-249.7 -80 L-249.7 -70 L-247.6 -60 L-243.3 -50 L-237.2 -40 L-229.4 -30 L-220.3 -20 L-210.4 -10 L-200.0 0 L-189.6 10 L-179.7 20 L-170.6 30 L-162.8 40 L-156.7 50 L-152.4 60 L-150.3 70 L-150.3 80 L-152.4 90 L-156.7 100 L-162.8 110 L-170.6 120 L-179.7 130 L-189.6 140 L-200.0 150 L-210.4 160 L-220.3 170 L-229.4 180 L-237.2 190 L-243.3 200 L-247.6 210 L-249.7 220 L-249.7 230 L-247.6 240 L-243.3 250 L-237.2 260 L-229.4 270 L-220.3 280 L-210.4 290 L-200.0 300 L-189.6 310 L-179.7 320 L-170.6 330 L-162.8 340 L-156.7 350 L-152.4 360 L-150.3 370 L-150.3 380 L-152.4 390 L-156.7 400 L-162.8 410 L-170.6 420 L-179.7 430 L-189.6 440 L-200.0 450 L-210.4 460 L-220.3 470 L-229.4 480 L-237.2 490 L-243.3 500 L-247.6 510 L-249.7 520 L-249.7 530 L-247.6 540 L-243.3 550 L-237.2 560 L-229.4 570 L-220.3 580 L-210.4 590 L-200.0 600 L-189.6 610 L-179.7 620 L-170.6 630 L-162.8 640 L-156.7 650 L-152.4 660 L-150.3 670 L-150.3 680 L-152.4 690 L-156.7 700 L-162.8 710 L-170.6 720 L-179.7 730 L-189.6 740 L-200.0 750 L-210.4 760 L-220.3 770 L-229.4 780 L-237.2 790 L-243.3 800 L-247.6 810 L-249.7 820" fill="none" stroke="#000" stroke-width="90"/><path d="M49.7 -820 L47.6 -810 L43.3 -800 L37.2 -790 L29.4 -780 L20.3 -770 L10.4 -760 L-0.0 -750 L-10.4 -740 L-20.3 -730 L-29.4 -720 L-37.2 -710 L-43.3 -700 L-47.6 -690 L-49.7 -680 L-49.7 -670 L-47.6 -660 L-43.3 -650 L-37.2 -640 L-29.4 -630 L-20.3 -620 L-10.4 -610 L0.0 -600 L10.4 -590 L20.3 -580 L29.4 -570 L37.2 -560 L43.3 -550 L47.6 -540 L49.7 -530 L49.7 -520 L47.6 -510 L43.3 -500 L37.2 -490 L29.4 -480 L20.3 -470 L10.4 -460 L-0.0 -450 L-10.4 -440 L-20.3 -430 L-29.4 -420 L-37.2 -410 L-43.3 -400 L-47.6 -390 L-49.7 -380 L-49.7 -370 L-47.6 -360 L-43.3 -350 L-37.2 -340 L-29.4 -330 L-20.3 -320 L-10.4 -310 L0.0 -300 L10.4 -290 L20.3 -280 L29.4 -270 L37.2 -260 L43.3 -250 L47.6 -240 L49.7 -230 L49.7 -220 L47.6 -210 L43.3 -200 L37.2 -190 L29.4 -180 L20.3 -170 L10.4 -160 L-0.0 -150 L-10.4 -140 L-20.3 -130 L-29.4 -120 L-37.2 -110 L-43.3 -100 L-47.6 -90 L-49.7 -80 L-49.7 -70 L-47.6 -60 L-43.3 -50 L-37.2 -40 L-29.4 -30 L-20.3 -20 L-10.4 -10 L0.0 0 L10.4 10 L20.3 20 L29.4 30 L37.2 40 L43.3 50 L47.6 60 L49.7 70 L49.7 80 L47.6 90 L43.3 100 L37.2 110 L29.4 120 L20.3 130 L10.4 140 L0.0 150 L-10.4 160 L-20.3 170 L-29.4 180 L-37.2 190 L-43.3 200 L-47.6 210 L-49.7 220 L-49.7 230 L-47.6 240 L-43.3 250 L-37.2 260 L-29.4 270 L-20.3 280 L-10.4 290 L-0.0 300 L10.4 310 L20.3 320 L29.4 330 L37.2 340 L43.3 350 L47.6 360 L49.7 370 L49.7 380 L47.6 390 L43.3 400 L37.2 410 L29.4 420 L20.3 430 L10.4 440 L0.0 450 L-10.4 460 L-20.3 470 L-29.4 480 L-37.2 490 L-43.3 500 L-47.6 510 L-49.7 520 L-49.7 530 L-47.6 540 L-43.3 550 L-37.2 560 L-29.4 570 L-20.3 580 L-10.4 590 L-0.0 600 L10.4 610 L20.3 620 L29.4 630 L37.2 640 L43.3 650 L47.6 660 L49.7 670 L49.7 680 L47.6 690 L43.3 700 L37.2 710 L29.4 720 L20.3 730 L10.4 740 L0.0 750 L-10.4 760 L-20.3 770 L-29.4 780 L-37.2 790 L-43.3 800 L-47.6 810 L-49.7 820" fill="none" stroke="#000" stroke-width="90"/><path d="M249.7 -820 L247.6 -810 L243.3 -800 L237.2 -790 L229.4 -780 L220.3 -770 L210.4 -760 L200.0 -750 L189.6 -740 L179.7 -730 L170.6 -720 L162.8 -710 L156.7 -700 L152.4 -690 L150.3 -680 L150.3 -670 L152.4 -660 L156.7 -650 L162.8 -640 L170.6 -630 L179.7 -620 L189.6 -610 L200.0 -600 L210.4 -590 L220.3 -580 L229.4 -570 L237.2 -560 L243.3 -550 L247.6 -540 L249.7 -530 L249.7 -520 L247.6 -510 L243.3 -500 L237.2 -490 L229.4 -480 L220.3 -470 L210.4 -460 L200.0 -450 L189.6 -440 L179.7 -430 L170.6 -420 L162.8 -410 L156.7 -400 L152.4 -390 L150.3 -380 L150.3 -370 L152.4 -360 L156.7 -350 L162.8 -340 L170.6 -330 L179.7 -320 L189.6 -310 L200.0 -300 L210.4 -290 L220.3 -280 L229.4 -270 L237.2 -260 L243.3 -250 L247.6 -240 L249.7 -230 L249.7 -220 L247.6 -210 L243.3 -200 L237.2 -190 L229.4 -180 L220.3 -170 L210.4 -160 L200.0 -150 L189.6 -140 L179.7 -130 L170.6 -120 L162.8 -110 L156.7 -100 L152.4 -90 L150.3 -80 L150.3 -70 L152.4 -60 L156.7 -50 L162.8 -40 L170.6 -30 L179.7 -20 L189.6 -10 L200.0 0 L210.4 10 L220.3 20 L229.4 30 L237.2 40 L243.3 50 L247.6 60 L249.7 70 L249.7 80 L247.6 90 L243.3 100 L237.2 110 L229.4 120 L220.3 130 L210.4 140 L200.0 150 L189.6 160 L179.7 170 L170.6 180 L162.8 190 L156.7 200 L152.4 210 L150.3 220 L150.3 230 L152.4 240 L156.7 250 L162.8 260 L170.6 270 L179.7 280 L189.6 290 L200.0 300 L210.4 310 L220.3 320 L229.4 330 L237.2 340 L243.3 350 L247.6 360 L249.7 370 L249.7 380 L247.6 390 L243.3 400 L237.2 410 L229.4 420 L220.3 430 L210.4 440 L200.0 450 L189.6 460 L179.7 470 L170.6 480 L162.8 490 L156.7 500 L152.4 510 L150.3 520 L150.3 530 L152.4 540 L156.7 550 L162.8 560 L170.6 570 L179.7 580 L189.6 590 L200.0 600 L210.4 610 L220.3 620 L229.4 630 L237.2 640 L243.3 650 L247.6 660 L249.7 670 L249.7 680 L247.6 690 L243.3 700 L237.2 710 L229.4 720 L220.3 730 L210.4 740 L200.0 750 L189.6 760 L179.7 770 L170.6 780 L162.8 790 L156.7 800 L152.4 810 L150.3 820" fill="none" stroke="#000" stroke-width="90"/><path d="M449.7 -820 L447.6 -810 L443.3 -800 L437.2 -790 L429.4 -780 L420.3 -770 L410.4 -760 L400.0 -750 L389.6 -740 L379.7 -730 L370.6 -720 L362.8 -710 L356.7 -700 L352.4 -690 L350.3 -680 L350.3 -670 L352.4 -660 L356.7 -650 L362.8 -640 L370.6 -630 L379.7 -620 L389.6 -610 L400.0 -600 L410.4 -590 L420.3 -580 L429.4 -570 L437.2 -560 L443.3 -550 L447.6 -540 L449.7 -530 L449.7 -520 L447.6 -510 L443.3 -500 L437.2 -490 L429.4 -480 L420.3 -470 L410.4 -460 L400.0 -450 L389.6 -440 L379.7 -430 L370.6 -420 L362.8 -410 L356.7 -400 L352.4 -390 L350.3 -380 L350.3 -370 L352.4 -360 L356.7 -350 L362.8 -340 L370.6 -330 L379.7 -320 L389.6 -310 L400.0 -300 L410.4 -290 L420.3 -280 L429.4 -270 L437.2 -260 L443.3 -250 L447.6 -240 L449.7 -230 L449.7 -220 L447.6 -210 L443.3 -200 L437.2 -190 L429.4 -180 L420.3 -170 L410.4 -160 L400.0 -150 L389.6 -140 L379.7 -130 L370.6 -120 L362.8 -110 L356.7 -100 L352.4 -90 L350.3 -80 L350.3 -70 L352.4 -60 L356.7 -50 L362.8 -40 L370.6 -30 L379.7 -20 L389.6 -10 L400.0 0 L410.4 10 L420.3 20 L429.4 30 L437.2 40 L443.3 50 L447.6 60 L449.7 70 L449.7 80 L447.6 90 L443.3 100 L437.2 110 L429.4 120 L420.3 130 L410.4 140 L400.0 150 L389.6 160 L379.7 170 L370.6 180 L362.8 190 L356.7 200 L352.4 210 L350.3 220 L350.3 230 L352.4 240 L356.7 250 L362.8 260 L370.6 270 L379.7 280 L389.6 290 L400.0 300 L410.4 310 L420.3 320 L429.4 330 L437.2 340 L443.3 350 L447.6 360 L449.7 370 L449.7 380 L447.6 390 L443.3 400 L437.2 410 L429.4 420 L420.3 430 L410.4 440 L400.0 450 L389.6 460 L379.7 470 L370.6 480 L362.8 490 L356.7 500 L352.4 510 L350.3 520 L350.3 530 L352.4 540 L356.7 550 L362.8 560 L370.6 570 L379.7 580 L389.6 590 L400.0 600 L410.4 610 L420.3 620 L429.4 630 L437.2 640 L443.3 650 L447.6 660 L449.7 670 L449.7 680 L447.6 690 L443.3 700 L437.2 710 L429.4 720 L420.3 730 L410.4 740 L400.0 750 L389.6 760 L379.7 770 L370.6 780 L362.8 790 L356.7 800 L352.4 810 L350.3 820" fill="none" stroke="#000" stroke-width="90"/></g><rect x="0" y="1235" width="1060" height="325" fill="#fff"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">WAVES</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 780)"><circle cx="0" cy="450" r="120" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="270" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="420" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="570" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="720" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="870" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="1020" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="1170" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="1320" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="1470" fill="none" stroke="#fff" stroke-width="60"/><circle cx="0" cy="450" r="1620" fill="none" stroke="#fff" stroke-width="60"/></g><rect x="0" y="1235" width="1060" height="325" fill="#000"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">RIPPLES</text>
+
+</svg></span></button>
+</div>
+<div class="deck" role="tabpanel" id="set-B" aria-labelledby="tab-B" hidden>
+<button class="flip" type="button" aria-pressed="false" aria-label="Rabbit. Tap to see the back: Bear">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <ellipse cx="-110" cy="-240" rx="80" ry="230" transform="rotate(-10 -110 -240)" fill="#000"/>
+      <ellipse cx="110" cy="-240" rx="80" ry="230" transform="rotate(10 110 -240)" fill="#000"/>
+      <ellipse cx="-110" cy="-250" rx="30" ry="150" transform="rotate(-10 -110 -250)" fill="#fff"/>
+      <ellipse cx="110" cy="-250" rx="30" ry="150" transform="rotate(10 110 -250)" fill="#fff"/>
+      <circle cx="0" cy="130" r="250" fill="#000"/>
+      <circle cx="-95" cy="90" r="34" fill="#fff"/><circle cx="95" cy="90" r="34" fill="#fff"/>
+      <ellipse cx="0" cy="170" rx="34" ry="24" fill="#fff"/>
+      <path d="M0 190 L0 225 M0 225 Q-35 260 -70 235 M0 225 Q35 260 70 235" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+      <path d="M-70 175 L-210 150 M-70 200 L-210 215 M70 175 L210 150 M70 200 L210 215" stroke="#fff" stroke-width="12" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">RABBIT</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <circle cx="-200" cy="-150" r="100" fill="#fff"/><circle cx="200" cy="-150" r="100" fill="#fff"/>
+      <circle cx="-200" cy="-150" r="48" fill="#000"/><circle cx="200" cy="-150" r="48" fill="#000"/>
+      <circle cx="0" cy="60" r="260" fill="#fff"/>
+      <circle cx="-95" cy="10" r="32" fill="#000"/><circle cx="95" cy="10" r="32" fill="#000"/>
+      <ellipse cx="0" cy="140" rx="115" ry="88" fill="#000"/>
+      <ellipse cx="0" cy="110" rx="42" ry="30" fill="#fff"/>
+      <path d="M0 130 L0 170 M0 170 Q-30 200 -60 180 M0 170 Q30 200 60 180" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">BEAR</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Cat. Tap to see the back: Owl">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <polygon points="-250,-90 -215,-360 -40,-230" fill="#fff" stroke="#fff" stroke-width="30" stroke-linejoin="round"/>
+      <polygon points="250,-90 215,-360 40,-230" fill="#fff" stroke="#fff" stroke-width="30" stroke-linejoin="round"/>
+      <polygon points="-200,-150 -185,-290 -95,-215" fill="#000"/><polygon points="200,-150 185,-290 95,-215" fill="#000"/>
+      <ellipse cx="0" cy="40" rx="290" ry="260" fill="#fff"/>
+      <ellipse cx="-110" cy="0" rx="40" ry="58" fill="#000"/><ellipse cx="110" cy="0" rx="40" ry="58" fill="#000"/>
+      <polygon points="-32,90 32,90 0,125" fill="#000" stroke="#000" stroke-width="14" stroke-linejoin="round"/>
+      <path d="M0 125 Q-30 170 -70 150 M0 125 Q30 170 70 150" fill="none" stroke="#000" stroke-width="14" stroke-linecap="round"/>
+      <path d="M-90 110 L-250 80 M-90 140 L-250 160 M90 110 L250 80 M90 140 L250 160" stroke="#000" stroke-width="12" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">CAT</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <polygon points="-235,-190 -190,-380 -80,-270" fill="#000" stroke="#000" stroke-width="24" stroke-linejoin="round"/>
+      <polygon points="235,-190 190,-380 80,-270" fill="#000" stroke="#000" stroke-width="24" stroke-linejoin="round"/>
+      <ellipse cx="-85" cy="370" rx="55" ry="28" fill="#000"/><ellipse cx="85" cy="370" rx="55" ry="28" fill="#000"/>
+      <ellipse cx="0" cy="40" rx="255" ry="330" fill="#000"/>
+      <circle cx="-105" cy="-110" r="100" fill="#fff"/><circle cx="105" cy="-110" r="100" fill="#fff"/>
+      <circle cx="-105" cy="-110" r="46" fill="#000"/><circle cx="105" cy="-110" r="46" fill="#000"/>
+      <polygon points="-36,-5 36,-5 0,65" fill="#fff" stroke="#fff" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M-120 150 Q-80 195 -40 150 M40 150 Q80 195 120 150 M-80 245 Q-40 290 0 245 M0 245 Q40 290 80 245" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">OWL</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Fish. Tap to see the back: Duck">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <polygon points="150,0 380,-190 380,190" fill="#000" stroke="#000" stroke-width="40" stroke-linejoin="round"/>
+      <ellipse cx="-60" cy="0" rx="290" ry="185" fill="#000"/>
+      <path d="M-120 -150 Q-60 0 -120 150" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="-220" cy="-45" r="40" fill="#fff"/>
+      <path d="M40 -80 Q90 0 40 80 M120 -60 Q160 0 120 60" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="-300" cy="-310" r="38" fill="#000"/><circle cx="-200" cy="-420" r="26" fill="#000"/><circle cx="-330" cy="-500" r="18" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">FISH</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <polygon points="250,60 390,-50 320,170" fill="#fff" stroke="#fff" stroke-width="30" stroke-linejoin="round"/>
+      <ellipse cx="40" cy="130" rx="270" ry="170" fill="#fff"/>
+      <circle cx="-150" cy="-140" r="145" fill="#fff"/>
+      <path d="M-270 -150 Q-400 -150 -420 -100 Q-380 -60 -270 -80 Z" fill="#fff"/>
+      <circle cx="-170" cy="-175" r="27" fill="#000"/>
+      <path d="M-20 110 Q120 30 240 110 Q120 220 -20 110 Z" fill="#fff" stroke="#000" stroke-width="18" stroke-linejoin="round"/>
+      <path d="M-420 370 Q-385 330 -350 370 T-280 370 Q-245 330 -210 370 T-140 370 Q-105 330 -70 370 T0 370 Q35 330 70 370 T140 370 Q175 330 210 370 T280 370 Q315 330 350 370 T420 370" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">DUCK</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Butterfly. Tap to see the back: Penguin">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <ellipse cx="-175" cy="-130" rx="175" ry="215" transform="rotate(-28 -175 -130)" fill="#fff"/>
+      <ellipse cx="175" cy="-130" rx="175" ry="215" transform="rotate(28 175 -130)" fill="#fff"/>
+      <ellipse cx="-145" cy="175" rx="125" ry="160" transform="rotate(25 -145 175)" fill="#fff"/>
+      <ellipse cx="145" cy="175" rx="125" ry="160" transform="rotate(-25 145 175)" fill="#fff"/>
+      <circle cx="-195" cy="-150" r="62" fill="#000"/><circle cx="195" cy="-150" r="62" fill="#000"/>
+      <circle cx="-150" cy="190" r="45" fill="#000"/><circle cx="150" cy="190" r="45" fill="#000"/>
+      <rect x="-48" y="-250" width="96" height="520" rx="48" fill="#fff" stroke="#000" stroke-width="22"/>
+      <path d="M-20 -240 Q-60 -340 -120 -380 M20 -240 Q60 -340 120 -380" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="-125" cy="-385" r="28" fill="#fff"/><circle cx="125" cy="-385" r="28" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">BUTTERFLY</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <ellipse cx="-245" cy="60" rx="60" ry="175" transform="rotate(18 -245 60)" fill="#000"/>
+      <ellipse cx="245" cy="60" rx="60" ry="175" transform="rotate(-18 245 60)" fill="#000"/>
+      <ellipse cx="-80" cy="375" rx="80" ry="36" fill="#000"/><ellipse cx="80" cy="375" rx="80" ry="36" fill="#000"/>
+      <ellipse cx="0" cy="30" rx="235" ry="345" fill="#000"/>
+      <ellipse cx="0" cy="100" rx="160" ry="255" fill="#fff"/>
+      <circle cx="-75" cy="-175" r="40" fill="#fff"/><circle cx="75" cy="-175" r="40" fill="#fff"/>
+      <circle cx="-68" cy="-170" r="18" fill="#000"/><circle cx="68" cy="-170" r="18" fill="#000"/>
+      <polygon points="-42,-118 42,-118 0,-55" fill="#000" stroke="#000" stroke-width="14" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">PENGUIN</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Elephant. Tap to see the back: Whale">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M290 20 Q350 60 345 130" fill="none" stroke="#000" stroke-width="22" stroke-linecap="round"/>
+      <rect x="-110" y="120" width="95" height="200" rx="30" fill="#000"/>
+      <rect x="150" y="120" width="95" height="200" rx="30" fill="#000"/>
+      <ellipse cx="80" cy="40" rx="240" ry="175" fill="#000"/>
+      <path d="M-300 -40 Q-390 120 -330 250" fill="none" stroke="#000" stroke-width="82" stroke-linecap="round"/>
+      <circle cx="-190" cy="-90" r="165" fill="#000"/>
+      <path d="M-140 -190 Q-10 -230 -15 -60 Q-20 90 -140 60" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="-255" cy="-130" r="24" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">ELEPHANT</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <polygon points="180,40 330,-40 430,-170 420,-20 300,110" fill="#fff" stroke="#fff" stroke-width="30" stroke-linejoin="round"/>
+      <ellipse cx="-60" cy="60" rx="320" ry="210" fill="#fff"/>
+      <circle cx="-230" cy="20" r="27" fill="#000"/>
+      <path d="M-350 110 Q-240 170 -110 120" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round"/>
+      <path d="M-90 -160 Q-130 -270 -200 -300 M-70 -160 L-70 -340 M-50 -160 Q-10 -270 60 -300" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/>
+      <path d="M-420 380 Q-385 340 -350 380 T-280 380 Q-245 340 -210 380 T-140 380 Q-105 340 -70 380 T0 380 Q35 340 70 380 T140 380 Q175 340 210 380 T280 380 Q315 340 350 380 T420 380" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">WHALE</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Bird. Tap to see the back: Ladybug">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <polygon points="200,-10 390,-170 380,40" fill="#fff" stroke="#fff" stroke-width="30" stroke-linejoin="round"/>
+      <path d="M-30 260 L-30 360 M70 260 L70 360 M-30 360 L-80 380 M70 360 L20 380" stroke="#fff" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="40" cy="60" r="225" fill="#fff"/>
+      <circle cx="-150" cy="-160" r="140" fill="#fff"/>
+      <polygon points="-275,-185 -390,-140 -275,-110" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+      <circle cx="-180" cy="-190" r="28" fill="#000"/>
+      <path d="M-20 20 C-20 150 170 170 280 100 C200 40 90 -10 -20 20 Z" fill="#fff" stroke="#000" stroke-width="20" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">BIRD</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-45 -310 Q-80 -400 -140 -430 M45 -310 Q80 -400 140 -430" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="-145" cy="-435" r="28" fill="#000"/><circle cx="145" cy="-435" r="28" fill="#000"/>
+      <circle cx="0" cy="-230" r="135" fill="#000"/>
+      <circle cx="-50" cy="-265" r="24" fill="#fff"/><circle cx="50" cy="-265" r="24" fill="#fff"/>
+      <circle cx="0" cy="70" r="290" fill="#000" stroke="#fff" stroke-width="22"/>
+      <line x1="0" y1="-215" x2="0" y2="355" stroke="#fff" stroke-width="22"/>
+      <circle cx="-140" cy="-30" r="58" fill="#fff"/><circle cx="140" cy="-30" r="58" fill="#fff"/><circle cx="-180" cy="150" r="50" fill="#fff"/><circle cx="180" cy="150" r="50" fill="#fff"/><circle cx="-90" cy="270" r="42" fill="#fff"/><circle cx="90" cy="270" r="42" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">LADYBUG</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Snail. Tap to see the back: Crab">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-360 230 L300 230 Q390 230 390 140 L390 -60 Q390 -130 325 -130 Q260 -130 260 -60 L260 140 L-300 140 Q-360 150 -360 230 Z" fill="#000"/>
+      <path d="M290 -120 L245 -270 M360 -120 L400 -270" stroke="#000" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="242" cy="-280" r="30" fill="#000"/><circle cx="403" cy="-280" r="30" fill="#000"/>
+      <circle cx="335" cy="-50" r="20" fill="#fff"/>
+      <circle cx="0" cy="-40" r="230" fill="#000" stroke="#fff" stroke-width="20"/>
+      <path d="M5.4 3.7 L5.6 4.2 L5.8 4.7 L5.9 5.2 L6.0 5.7 L6.1 6.3 L6.1 6.8 L6.1 7.4 L6.1 8.0 L6.0 8.6 L5.9 9.2 L5.8 9.8 L5.6 10.4 L5.3 11.0 L5.1 11.6 L4.8 12.2 L4.4 12.8 L4.0 13.4 L3.6 14.0 L3.1 14.6 L2.6 15.1 L2.1 15.6 L1.5 16.1 L0.8 16.6 L0.2 17.1 L-0.5 17.5 L-1.2 17.9 L-2.0 18.3 L-2.8 18.6 L-3.6 18.9 L-4.5 19.2 L-5.4 19.4 L-6.3 19.6 L-7.2 19.7 L-8.1 19.8 L-9.1 19.9 L-10.1 19.9 L-11.1 19.9 L-12.1 19.8 L-13.1 19.6 L-14.2 19.5 L-15.2 19.2 L-16.2 18.9 L-17.3 18.6 L-18.3 18.2 L-19.4 17.7 L-20.4 17.2 L-21.4 16.7 L-22.4 16.1 L-23.4 15.4 L-24.4 14.7 L-25.3 13.9 L-26.3 13.1 L-27.2 12.2 L-28.0 11.2 L-28.9 10.3 L-29.7 9.2 L-30.4 8.1 L-31.2 7.0 L-31.9 5.8 L-32.5 4.6 L-33.1 3.4 L-33.6 2.1 L-34.1 0.7 L-34.6 -0.6 L-35.0 -2.0 L-35.3 -3.5 L-35.5 -5.0 L-35.8 -6.4 L-35.9 -8.0 L-36.0 -9.5 L-36.0 -11.1 L-35.9 -12.6 L-35.8 -14.2 L-35.6 -15.8 L-35.3 -17.4 L-35.0 -19.0 L-34.6 -20.6 L-34.1 -22.3 L-33.5 -23.9 L-32.9 -25.4 L-32.2 -27.0 L-31.4 -28.6 L-30.5 -30.1 L-29.6 -31.6 L-28.6 -33.1 L-27.5 -34.6 L-26.4 -36.0 L-25.2 -37.4 L-23.9 -38.7 L-22.5 -40.1 L-21.1 -41.3 L-19.6 -42.5 L-18.1 -43.7 L-16.5 -44.8 L-14.8 -45.8 L-13.1 -46.8 L-11.3 -47.7 L-9.5 -48.5 L-7.6 -49.3 L-5.6 -50.0 L-3.7 -50.6 L-1.7 -51.2 L0.4 -51.6 L2.5 -52.0 L4.6 -52.3 L6.7 -52.5 L8.9 -52.6 L11.1 -52.7 L13.3 -52.6 L15.5 -52.5 L17.7 -52.2 L20.0 -51.9 L22.2 -51.4 L24.4 -50.9 L26.7 -50.3 L28.9 -49.5 L31.1 -48.7 L33.2 -47.8 L35.4 -46.8 L37.5 -45.7 L39.6 -44.5 L41.6 -43.1 L43.6 -41.7 L45.6 -40.3 L47.5 -38.7 L49.4 -37.0 L51.2 -35.3 L52.9 -33.4 L54.6 -31.5 L56.2 -29.5 L57.7 -27.4 L59.2 -25.2 L60.6 -23.0 L61.8 -20.7 L63.0 -18.3 L64.1 -15.9 L65.2 -13.4 L66.1 -10.9 L66.9 -8.3 L67.6 -5.6 L68.2 -2.9 L68.7 -0.2 L69.1 2.5 L69.4 5.3 L69.6 8.2 L69.6 11.0 L69.5 13.9 L69.4 16.7 L69.0 19.6 L68.6 22.5 L68.1 25.4 L67.4 28.2 L66.6 31.1 L65.7 33.9 L64.7 36.8 L63.5 39.6 L62.3 42.3 L60.9 45.0 L59.4 47.7 L57.7 50.3 L56.0 52.9 L54.1 55.4 L52.2 57.8 L50.1 60.2 L47.9 62.5 L45.6 64.8 L43.3 66.9 L40.8 68.9 L38.2 70.9 L35.5 72.8 L32.7 74.5 L29.9 76.2 L27.0 77.7 L24.0 79.2 L20.9 80.5 L17.8 81.7 L14.5 82.8 L11.3 83.7 L8.0 84.5 L4.6 85.2 L1.2 85.8 L-2.2 86.2 L-5.7 86.5 L-9.2 86.6 L-12.7 86.6 L-16.3 86.5 L-19.8 86.2 L-23.4 85.7 L-26.9 85.1 L-30.4 84.4 L-33.9 83.5 L-37.4 82.5 L-40.9 81.3 L-44.3 80.0 L-47.7 78.5 L-51.1 76.9 L-54.4 75.2 L-57.6 73.3 L-60.8 71.3 L-63.9 69.1 L-66.9 66.8 L-69.8 64.4 L-72.7 61.8 L-75.4 59.1 L-78.1 56.3 L-80.7 53.4 L-83.1 50.4 L-85.4 47.2 L-87.6 43.9 L-89.7 40.6 L-91.7 37.1 L-93.5 33.6 L-95.2 29.9 L-96.7 26.2 L-98.1 22.4 L-99.4 18.6 L-100.5 14.6 L-101.4 10.7 L-102.2 6.6 L-102.8 2.5 L-103.3 -1.6 L-103.6 -5.7 L-103.7 -9.9 L-103.6 -14.1 L-103.4 -18.3 L-103.0 -22.5 L-102.5 -26.7 L-101.8 -30.9 L-100.8 -35.1 L-99.8 -39.3 L-98.5 -43.4 L-97.1 -47.5 L-95.5 -51.6 L-93.7 -55.6 L-91.8 -59.5 L-89.7 -63.4 L-87.5 -67.2 L-85.0 -70.9 L-82.5 -74.6 L-79.7 -78.1 L-76.8 -81.6 L-73.8 -84.9 L-70.6 -88.1 L-67.3 -91.2 L-63.8 -94.2 L-60.3 -97.1 L-56.5 -99.8 L-52.7 -102.3 L-48.8 -104.8 L-44.7 -107.0 L-40.5 -109.1 L-36.3 -111.1 L-31.9 -112.9 L-27.5 -114.5 L-23.0 -115.9 L-18.4 -117.2 L-13.7 -118.3 L-9.0 -119.1 L-4.3 -119.8 L0.5 -120.4 L5.4 -120.7 L10.2 -120.8 L15.1 -120.7 L20.0 -120.5 L24.9 -120.0 L29.8 -119.3 L34.6 -118.5 L39.5 -117.4 L44.3 -116.1 L49.1 -114.7 L53.8 -113.0 L58.5 -111.2 L63.1 -109.1 L67.7 -106.9 L72.1 -104.4 L76.5 -101.8 L80.8 -99.0 L85.0 -96.0 L89.1 -92.9 L93.0 -89.5 L96.9 -86.0 L100.6 -82.4 L104.1 -78.6 L107.5 -74.6 L110.8 -70.5 L113.9 -66.2 L116.9 -61.8 L119.6 -57.2 L122.2 -52.6 L124.6 -47.8 L126.9 -42.9 L128.9 -38.0 L130.7 -32.9 L132.4 -27.7 L133.8 -22.5 L135.0 -17.2 L136.0 -11.8 L136.8 -6.4 L137.4 -0.9 L137.8 4.6 L137.9 10.2 L137.8 15.7 L137.5 21.3 L137.0 26.9 L136.3 32.4 L135.3 38.0 L134.1 43.5 L132.6 49.0 L131.0 54.4 L129.1 59.8 L127.0 65.1 L124.7 70.3 L122.1 75.5 L119.4 80.5 L116.4 85.5 L113.2 90.4 L109.9 95.1 L106.3 99.7 L102.5 104.2 L98.6 108.6 L94.4 112.7 L90.1 116.8 L85.6 120.6 L81.0 124.3 L76.1 127.9 L71.2 131.2 L66.1 134.3 L60.8 137.2 L55.4 140.0 L50.0 142.5 L44.3 144.8 L38.6 146.9 L32.8 148.7 L26.9 150.4 L20.9 151.7 L14.9 152.9 L8.8 153.8 L2.7 154.5 L-3.5 154.9 L-9.8 155.1 L-16.0 155.0 L-22.2 154.7 L-28.5 154.1 L-34.7 153.2 L-40.9 152.2 L-47.1 150.8 L-53.3 149.2 L-59.3 147.4 L-65.4 145.3 L-71.3 142.9 L-77.2 140.4 L-83.0 137.5 L-88.6 134.5 L-94.2 131.2 L-99.7 127.6 L-105.0 123.9 L-110.1 119.9 L-115.1 115.7 L-120.0 111.3 L-124.7 106.7 L-129.2 101.9" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">SNAIL</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-190 30 L-300 -60" stroke="#fff" stroke-width="45" stroke-linecap="round"/>
+      <circle cx="-330" cy="-150" r="105" fill="#fff"/>
+      <polygon points="-330,-150 -440,-250 -450,-130" fill="#000"/>
+      <path d="M-220 120 L-370 190 M-200 180 L-330 280 M-160 220 L-260 340" stroke="#fff" stroke-width="34" stroke-linecap="round"/>
+      <path d="M-70 -40 L-90 -190" stroke="#fff" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="-90" cy="-200" r="46" fill="#fff"/><circle cx="-90" cy="-200" r="18" fill="#000"/>
+      <path d="M190 30 L300 -60" stroke="#fff" stroke-width="45" stroke-linecap="round"/>
+      <circle cx="330" cy="-150" r="105" fill="#fff"/>
+      <polygon points="330,-150 440,-250 450,-130" fill="#000"/>
+      <path d="M220 120 L370 190 M200 180 L330 280 M160 220 L260 340" stroke="#fff" stroke-width="34" stroke-linecap="round"/>
+      <path d="M70 -40 L90 -190" stroke="#fff" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="90" cy="-200" r="46" fill="#fff"/><circle cx="90" cy="-200" r="18" fill="#000"/><ellipse cx="0" cy="80" rx="260" ry="175" fill="#fff"/>
+      <path d="M-70 120 Q0 180 70 120" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">CRAB</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Turtle. Tap to see the back: Octopus">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <circle cx="380" cy="20" r="80" fill="#fff"/>
+      <rect x="250" y="20" width="120" height="70" fill="#fff"/>
+      <circle cx="405" cy="0" r="16" fill="#000"/>
+      <polygon points="-310,70 -400,110 -310,110" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <rect x="-250" y="60" width="100" height="120" rx="40" fill="#fff"/>
+      <rect x="150" y="60" width="100" height="120" rx="40" fill="#fff"/>
+      <path d="M-330 90 A330 330 0 0 1 330 90 Z" fill="#fff"/>
+      <path d="M-330 90 L330 90" stroke="#000" stroke-width="22"/>
+      <polygon points="0.0,-185.0 82.3,-137.5 82.3,-42.5 0.0,5.0 -82.3,-42.5 -82.3,-137.5" fill="none" stroke="#000" stroke-width="20"/>
+      <path d="M-82 -42 L-200 20 M82 -42 L200 20 M-82 -138 L-170 -200 M82 -138 L170 -200 M0 5 L0 80" stroke="#000" stroke-width="20" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">TURTLE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M-200 40 C-270 160 -130 260 -200 340 Q-230 400 -280 380" fill="none" stroke="#000" stroke-width="62" stroke-linecap="round"/><path d="M-120 40 C-50 160 -190 260 -120 340 Q-90 400 -40 380" fill="none" stroke="#000" stroke-width="62" stroke-linecap="round"/><path d="M-40 40 C-110 160 30 260 -40 340 Q-70 400 -120 380" fill="none" stroke="#000" stroke-width="62" stroke-linecap="round"/><path d="M40 40 C110 160 -30 260 40 340 Q70 400 120 380" fill="none" stroke="#000" stroke-width="62" stroke-linecap="round"/><path d="M120 40 C50 160 190 260 120 340 Q90 400 40 380" fill="none" stroke="#000" stroke-width="62" stroke-linecap="round"/><path d="M200 40 C270 160 130 260 200 340 Q230 400 280 380" fill="none" stroke="#000" stroke-width="62" stroke-linecap="round"/><ellipse cx="0" cy="-120" rx="240" ry="260" fill="#000"/>
+      <circle cx="-85" cy="-120" r="42" fill="#fff"/><circle cx="85" cy="-120" r="42" fill="#fff"/>
+      <circle cx="-80" cy="-114" r="19" fill="#000"/><circle cx="80" cy="-114" r="19" fill="#000"/>
+      <path d="M-60 -20 Q0 30 60 -20" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">OCTOPUS</text>
+
+</svg></span></button>
+</div>
+<div class="deck" role="tabpanel" id="set-C" aria-labelledby="tab-C" hidden>
+<button class="flip" type="button" aria-pressed="false" aria-label="Happy Face. Tap to see the back: Ball">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <circle r="360" fill="#000"/>
+      <path d="M-30 -350 C-40 -470 110 -480 100 -385" fill="none" stroke="#000" stroke-width="48" stroke-linecap="round"/>
+      <circle cx="-125" cy="-60" r="48" fill="#fff"/><circle cx="125" cy="-60" r="48" fill="#fff"/>
+      <path d="M-165 90 Q0 250 165 90" fill="none" stroke="#fff" stroke-width="48" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">HAPPY FACE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <circle r="370" fill="#fff"/>
+      <path d="M0 -370 Q-200 0 0 370 M0 -370 Q200 0 0 370 M-370 0 L370 0" fill="none" stroke="#000" stroke-width="26"/>
+      <circle cx="-150" cy="-170" r="40" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">BALL</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Sun. Tap to see the back: Balloon">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><circle r="185" fill="#fff"/><line x1="255.0" y1="0.0" x2="370.0" y2="0.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="220.8" y1="127.5" x2="320.4" y2="185.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="127.5" y1="220.8" x2="185.0" y2="320.4" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="0.0" y1="255.0" x2="0.0" y2="370.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="-127.5" y1="220.8" x2="-185.0" y2="320.4" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="-220.8" y1="127.5" x2="-320.4" y2="185.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="-255.0" y1="0.0" x2="-370.0" y2="0.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="-220.8" y1="-127.5" x2="-320.4" y2="-185.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="-127.5" y1="-220.8" x2="-185.0" y2="-320.4" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="-0.0" y1="-255.0" x2="-0.0" y2="-370.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="127.5" y1="-220.8" x2="185.0" y2="-320.4" stroke="#fff" stroke-width="62" stroke-linecap="round"/><line x1="220.8" y1="-127.5" x2="320.4" y2="-185.0" stroke="#fff" stroke-width="62" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">SUN</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M0 180 Q-60 280 0 360 Q60 440 0 520" fill="none" stroke="#000" stroke-width="16" stroke-linecap="round"/>
+      <polygon points="-38,190 38,190 0,150" fill="#000" stroke="#000" stroke-width="14" stroke-linejoin="round"/>
+      <ellipse cx="0" cy="-140" rx="235" ry="295" fill="#000"/>
+      <ellipse cx="-110" cy="-250" rx="40" ry="85" transform="rotate(30 -110 -250)" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">BALLOON</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Moon & Stars. Tap to see the back: Umbrella">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <circle cx="-40" cy="40" r="300" fill="#fff"/><circle cx="90" cy="-50" r="255" fill="#000"/>
+      <polygon points="230.0,-405.0 248.8,-355.9 301.3,-353.2 260.4,-320.1 274.1,-269.3 230.0,-298.0 185.9,-269.3 199.6,-320.1 158.7,-353.2 211.2,-355.9" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/><polygon points="340.0,138.0 352.9,172.2 389.5,173.9 360.9,196.8 370.6,232.1 340.0,212.0 309.4,232.1 319.1,196.8 290.5,173.9 327.1,172.2" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/><polygon points="120.0,380.0 130.0,406.2 158.0,407.6 136.2,425.3 143.5,452.4 120.0,437.0 96.5,452.4 103.8,425.3 82.0,407.6 110.0,406.2" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">MOON &amp; STARS</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M0 -380 L0 -440" stroke="#000" stroke-width="30" stroke-linecap="round"/>
+      <path d="M0 0 L0 320 Q0 400 -70 400 Q-140 400 -140 330" fill="none" stroke="#000" stroke-width="38" stroke-linecap="round"/>
+      <path d="M-400 0 A400 380 0 0 1 400 0 Q333 -70 267 0 Q200 -70 133 0 Q67 -70 0 0 Q-67 -70 -133 0 Q-200 -70 -267 0 Q-333 -70 -400 0 Z" fill="#000"/>
+      <path d="M0 -370 Q-110 -200 -133 -20 M0 -370 Q110 -200 133 -20 M0 -370 L0 -30" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">UMBRELLA</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Star. Tap to see the back: Car">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="0.0,-370.0 99.9,-107.5 380.4,-93.6 161.7,82.5 235.1,353.6 0.0,200.0 -235.1,353.6 -161.7,82.5 -380.4,-93.6 -99.9,-107.5" fill="#000" stroke="#000" stroke-width="8" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">STAR</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-410 120 L-410 0 Q-410 -40 -370 -45 L-250 -55 L-160 -200 Q-140 -230 -100 -230 L150 -230 Q190 -230 210 -200 L295 -55 L375 -45 Q415 -35 415 10 L415 120 Z" fill="#fff"/>
+      <path d="M-140 -190 L-25 -190 L-25 -75 L-210 -75 Z" fill="#000" stroke="#000" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M25 -190 L145 -190 L215 -75 L25 -75 Z" fill="#000" stroke="#000" stroke-width="16" stroke-linejoin="round"/>
+      <circle cx="-220" cy="140" r="115" fill="#fff" stroke="#000" stroke-width="24"/><circle cx="220" cy="140" r="115" fill="#fff" stroke="#000" stroke-width="24"/>
+      <circle cx="-220" cy="140" r="40" fill="#000"/><circle cx="220" cy="140" r="40" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">CAR</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Heart. Tap to see the back: Sailboat">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M0 330 C-150 200 -400 60 -400 -120 C-400 -260 -290 -340 -190 -340 C-100 -340 -30 -290 0 -220 C30 -290 100 -340 190 -340 C290 -340 400 -260 400 -120 C400 60 150 200 0 330 Z" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">HEART</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M0 150 L0 -420" stroke="#000" stroke-width="26" stroke-linecap="round"/>
+      <polygon points="0,-420 90,-390 0,-360" fill="#000"/>
+      <polygon points="35,-350 35,110 340,110" fill="#000" stroke="#000" stroke-width="20" stroke-linejoin="round"/>
+      <polygon points="-35,-280 -35,110 -270,110" fill="#000" stroke="#000" stroke-width="20" stroke-linejoin="round"/>
+      <path d="M-390 160 L390 160 L290 300 L-290 300 Z" fill="#000" stroke="#000" stroke-width="20" stroke-linejoin="round"/>
+      <path d="M-420 390 Q-385 350 -350 390 T-280 390 Q-245 350 -210 390 T-140 390 Q-105 350 -70 390 T0 390 Q35 350 70 390 T140 390 Q175 350 210 390 T280 390 Q315 350 350 390 T420 390" fill="none" stroke="#000" stroke-width="30" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">SAILBOAT</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Flower. Tap to see the back: Tree">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><circle cx="215.0" cy="0.0" r="130" fill="#000"/><circle cx="152.0" cy="152.0" r="130" fill="#000"/><circle cx="0.0" cy="215.0" r="130" fill="#000"/><circle cx="-152.0" cy="152.0" r="130" fill="#000"/><circle cx="-215.0" cy="0.0" r="130" fill="#000"/><circle cx="-152.0" cy="-152.0" r="130" fill="#000"/><circle cx="-0.0" cy="-215.0" r="130" fill="#000"/><circle cx="152.0" cy="-152.0" r="130" fill="#000"/><circle r="215" fill="#000"/><circle r="120" fill="#fff"/><circle r="62" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">FLOWER</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <rect x="-55" y="100" width="110" height="300" fill="#fff"/>
+      <path d="M-300 400 L300 400" stroke="#fff" stroke-width="30" stroke-linecap="round"/>
+      <circle cx="0" cy="-200" r="175" fill="#fff"/><circle cx="-165" cy="-50" r="160" fill="#fff"/>
+      <circle cx="165" cy="-50" r="160" fill="#fff"/><circle cx="0" cy="40" r="170" fill="#fff"/>
+      <circle cx="-90" cy="-140" r="30" fill="#000"/><circle cx="110" cy="-60" r="30" fill="#000"/><circle cx="-40" cy="60" r="30" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">TREE</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Rain Cloud. Tap to see the back: Baby Bottle">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><circle cx="-185" cy="-60" r="150" fill="#fff"/><circle cx="20" cy="-150" r="200" fill="#fff"/><circle cx="200" cy="-50" r="140" fill="#fff"/>
+      <rect x="-335" y="-60" width="675" height="170" rx="85" fill="#fff"/>
+      <circle cx="-65" cy="-40" r="22" fill="#000"/><circle cx="85" cy="-40" r="22" fill="#000"/>
+      <path d="M-50 30 Q10 80 70 30" fill="none" stroke="#000" stroke-width="20" stroke-linecap="round"/>
+      <path d="M-170 220 Q-122 290 -128 312 A44 44 0 0 1 -212 312 Q-218 290 -170 220 Z" fill="#fff"/><path d="M10 280 Q58 350 52 372 A44 44 0 0 1 -32 372 Q-38 350 10 280 Z" fill="#fff"/><path d="M190 220 Q238 290 232 312 A44 44 0 0 1 148 312 Q142 290 190 220 Z" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">RAIN CLOUD</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-65 -250 Q-65 -410 0 -410 Q65 -410 65 -250 Z" fill="#000"/>
+      <rect x="-150" y="-265" width="300" height="100" rx="24" fill="#000"/>
+      <rect x="-165" y="-150" width="330" height="540" rx="75" fill="#000"/>
+      <line x1="20" y1="-60" x2="125" y2="-60" stroke="#fff" stroke-width="18" stroke-linecap="round"/><line x1="60" y1="30" x2="125" y2="30" stroke="#fff" stroke-width="18" stroke-linecap="round"/><line x1="20" y1="120" x2="125" y2="120" stroke="#fff" stroke-width="18" stroke-linecap="round"/><line x1="60" y1="210" x2="125" y2="210" stroke="#fff" stroke-width="18" stroke-linecap="round"/><line x1="20" y1="300" x2="125" y2="300" stroke="#fff" stroke-width="18" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">BABY BOTTLE</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="House. Tap to see the back: Rocket">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <rect x="170" y="-340" width="85" height="200" fill="#000"/>
+      <polygon points="-400,-50 0,-400 400,-50" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+      <rect x="-300" y="-80" width="600" height="460" fill="#000"/>
+      <rect x="-230" y="0" width="160" height="160" fill="#fff"/>
+      <path d="M-150 0 L-150 160 M-230 80 L-70 80" stroke="#000" stroke-width="20"/>
+      <path d="M50 380 L50 150 A75 75 0 0 1 200 150 L200 380 Z" fill="#fff"/>
+      <circle cx="170" cy="270" r="14" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">HOUSE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-80 230 Q0 480 80 230 Z" fill="#fff"/>
+      <path d="M-35 240 Q0 370 35 240 Z" fill="#000"/>
+      <polygon points="-140,30 -290,270 -140,210" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+      <polygon points="140,30 290,270 140,210" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+      <path d="M0 -430 C150 -300 165 -100 145 220 L-145 220 C-165 -100 -150 -300 0 -430 Z" fill="#fff"/>
+      <circle cx="0" cy="-160" r="78" fill="#000"/><circle cx="0" cy="-160" r="42" fill="#fff"/>
+      <polygon points="-330.0,-345.0 -318.8,-315.4 -287.2,-313.9 -311.9,-294.1 -303.5,-263.6 -330.0,-281.0 -356.5,-263.6 -348.1,-294.1 -372.8,-313.9 -341.2,-315.4" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/><polygon points="320.0,-238.0 329.4,-212.9 356.1,-211.7 335.2,-195.1 342.3,-169.3 320.0,-184.0 297.7,-169.3 304.8,-195.1 283.9,-211.7 310.6,-212.9" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/><polygon points="-310.0,298.0 -301.8,318.7 -279.6,320.1 -296.7,334.3 -291.2,355.9 -310.0,344.0 -328.8,355.9 -323.3,334.3 -340.4,320.1 -318.2,318.7" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">ROCKET</text>
+
+</svg></span></button>
+</div>
+<div class="deck" role="tabpanel" id="set-D" aria-labelledby="tab-D" hidden>
+<button class="flip" type="button" aria-pressed="false" aria-label="Triangle. Tap to see the back: Circle">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="0,-360 400,320 -400,320" fill="#fff" stroke="#fff" stroke-width="40" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">TRIANGLE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><circle r="390" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">CIRCLE</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Nested Squares. Tap to see the back: Square">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><rect x="-390" y="-390" width="780" height="780" fill="#000"/><rect x="-310" y="-310" width="620" height="620" fill="#fff"/><rect x="-230" y="-230" width="460" height="460" fill="#000"/><rect x="-150" y="-150" width="300" height="300" fill="#fff"/><rect x="-70" y="-70" width="140" height="140" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000" textLength="860" lengthAdjust="spacingAndGlyphs">NESTED SQUARES</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><rect x="-360" y="-360" width="720" height="720" rx="24" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">SQUARE</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Diamond. Tap to see the back: Hexagon">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="0,-560 400,0 0,560 -400,0" fill="#fff"/><polygon points="0,-370 265,0 0,370 -265,0" fill="#000"/><polygon points="0,-180 130,0 0,180 -130,0" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">DIAMOND</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="0.0,-410.0 355.1,-205.0 355.1,205.0 0.0,410.0 -355.1,205.0 -355.1,-205.0" fill="#000"/><polygon points="0.0,-250.0 216.5,-125.0 216.5,125.0 0.0,250.0 -216.5,125.0 -216.5,-125.0" fill="#fff"/><polygon points="0.0,-110.0 95.3,-55.0 95.3,55.0 0.0,110.0 -95.3,55.0 -95.3,-55.0" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">HEXAGON</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Rainbow. Tap to see the back: Plus">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M-340 260 L-340 0 A340 340 0 0 1 340 0 L340 260" fill="none" stroke="#000" stroke-width="80"/><path d="M-220 260 L-220 0 A220 220 0 0 1 220 0 L220 260" fill="none" stroke="#000" stroke-width="80"/><path d="M-100 260 L-100 0 A100 100 0 0 1 100 0 L100 260" fill="none" stroke="#000" stroke-width="80"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">RAINBOW</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><rect x="-115" y="-390" width="230" height="780" rx="30" fill="#fff"/><rect x="-390" y="-115" width="780" height="230" rx="30" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">PLUS</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Pinwheel. Tap to see the back: Arrow">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="0,0 -390,-390 0,-390" fill="#fff"/><polygon points="0,0 390,-390 390,0" fill="#fff"/><polygon points="0,0 390,390 0,390" fill="#fff"/><polygon points="0,0 -390,390 -390,0" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">PINWHEEL</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="-390,-115 50,-115 50,-310 400,0 50,310 50,115 -390,115" fill="#000" stroke="#000" stroke-width="24" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">ARROW</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Starburst. Tap to see the back: Ring">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="0.0,-400.0 55.6,-243.7 173.6,-360.4 155.9,-195.5 312.7,-249.4 225.2,-108.5 390.0,-89.0 250.0,0.0 390.0,89.0 225.2,108.5 312.7,249.4 155.9,195.5 173.6,360.4 55.6,243.7 0.0,400.0 -55.6,243.7 -173.6,360.4 -155.9,195.5 -312.7,249.4 -225.2,108.5 -390.0,89.0 -250.0,0.0 -390.0,-89.0 -225.2,-108.5 -312.7,-249.4 -155.9,-195.5 -173.6,-360.4 -55.6,-243.7" fill="#000" stroke="#000" stroke-width="8" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">STARBURST</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><circle r="390" fill="#fff"/><circle r="225" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">RING</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Eye. Tap to see the back: Teardrop">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-430 0 Q0 -340 430 0 Q0 340 -430 0 Z" fill="#fff"/>
+      <circle r="155" fill="#000"/><circle r="85" fill="#fff"/><circle cx="35" cy="-35" r="28" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">EYE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M0 -430 C100 -250 330 -20 330 150 A330 330 0 0 1 -330 150 C-330 -20 -100 -250 0 -430 Z" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">TEARDROP</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Half Moons. Tap to see the back: Quarter Circles">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-370 -400 A370 370 0 0 0 370 -400 Z" fill="#000"/>
+      <path d="M-370 400 A370 370 0 0 1 370 400 Z" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">HALF MOONS</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><clipPath id="qb320"><rect x="-385" y="-385" width="370" height="370"/></clipPath><circle cx="-385" cy="-385" r="370" fill="#fff" clip-path="url(#qb320)"/><clipPath id="qb321"><rect x="15" y="-385" width="370" height="370"/></clipPath><circle cx="15" cy="-15" r="370" fill="#fff" clip-path="url(#qb321)"/><clipPath id="qb322"><rect x="-385" y="15" width="370" height="370"/></clipPath><circle cx="-15" cy="15" r="370" fill="#fff" clip-path="url(#qb322)"/><clipPath id="qb323"><rect x="15" y="15" width="370" height="370"/></clipPath><circle cx="385" cy="385" r="370" fill="#fff" clip-path="url(#qb323)"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff" textLength="860" lengthAdjust="spacingAndGlyphs">QUARTER CIRCLES</text>
+
+</svg></span></button>
+</div>
+<div class="deck" role="tabpanel" id="set-E" aria-labelledby="tab-E" hidden>
+<button class="flip" type="button" aria-pressed="false" aria-label="Apple. Tap to see the back: Red Zigzag">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">APPLE</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 780)"><polyline points="-600,-720 -490,-800 -380,-720 -270,-800 -160,-720 -50,-800 60,-720 170,-800 280,-720 390,-800 500,-720" fill="none" stroke="#fff" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,-590 -490,-670 -380,-590 -270,-670 -160,-590 -50,-670 60,-590 170,-670 280,-590 390,-670 500,-590" fill="none" stroke="#D7262E" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,-460 -490,-540 -380,-460 -270,-540 -160,-460 -50,-540 60,-460 170,-540 280,-460 390,-540 500,-460" fill="none" stroke="#fff" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,-330 -490,-410 -380,-330 -270,-410 -160,-330 -50,-410 60,-330 170,-410 280,-330 390,-410 500,-330" fill="none" stroke="#D7262E" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,-200 -490,-280 -380,-200 -270,-280 -160,-200 -50,-280 60,-200 170,-280 280,-200 390,-280 500,-200" fill="none" stroke="#fff" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,-70 -490,-150 -380,-70 -270,-150 -160,-70 -50,-150 60,-70 170,-150 280,-70 390,-150 500,-70" fill="none" stroke="#D7262E" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,60 -490,-20 -380,60 -270,-20 -160,60 -50,-20 60,60 170,-20 280,60 390,-20 500,60" fill="none" stroke="#fff" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,190 -490,110 -380,190 -270,110 -160,190 -50,110 60,190 170,110 280,190 390,110 500,190" fill="none" stroke="#D7262E" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,320 -490,240 -380,320 -270,240 -160,320 -50,240 60,320 170,240 280,320 390,240 500,320" fill="none" stroke="#fff" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,450 -490,370 -380,450 -270,370 -160,450 -50,370 60,450 170,370 280,450 390,370 500,450" fill="none" stroke="#D7262E" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,580 -490,500 -380,580 -270,500 -160,580 -50,500 60,580 170,500 280,580 390,500 500,580" fill="none" stroke="#fff" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,710 -490,630 -380,710 -270,630 -160,710 -50,630 60,710 170,630 280,710 390,630 500,710" fill="none" stroke="#D7262E" stroke-width="38" stroke-linejoin="miter"/><polyline points="-600,840 -490,760 -380,840 -270,760 -160,840 -50,760 60,840 170,760 280,840 390,760 500,840" fill="none" stroke="#fff" stroke-width="38" stroke-linejoin="miter"/></g><rect x="0" y="1235" width="1060" height="325" fill="#000"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">RED ZIGZAG</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Strawberry. Tap to see the back: Red Diamonds">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M0 380 C-200 300 -330 50 -300 -120 C-280 -230 -150 -250 0 -230 C150 -250 280 -230 300 -120 C330 50 200 300 0 380 Z" fill="#D7262E"/><ellipse cx="-170" cy="-120" rx="11" ry="19" fill="#fff"/><ellipse cx="-60" cy="-140" rx="11" ry="19" fill="#fff"/><ellipse cx="60" cy="-140" rx="11" ry="19" fill="#fff"/><ellipse cx="170" cy="-120" rx="11" ry="19" fill="#fff"/><ellipse cx="-200" cy="10" rx="11" ry="19" fill="#fff"/><ellipse cx="-90" cy="-20" rx="11" ry="19" fill="#fff"/><ellipse cx="20" cy="-30" rx="11" ry="19" fill="#fff"/><ellipse cx="130" cy="-20" rx="11" ry="19" fill="#fff"/><ellipse cx="220" cy="10" rx="11" ry="19" fill="#fff"/><ellipse cx="-140" cy="130" rx="11" ry="19" fill="#fff"/><ellipse cx="-30" cy="110" rx="11" ry="19" fill="#fff"/><ellipse cx="80" cy="120" rx="11" ry="19" fill="#fff"/><ellipse cx="180" cy="140" rx="11" ry="19" fill="#fff"/><ellipse cx="-60" cy="240" rx="11" ry="19" fill="#fff"/><ellipse cx="50" cy="240" rx="11" ry="19" fill="#fff"/><ellipse cx="0" cy="320" rx="11" ry="19" fill="#fff"/><g transform="translate(0 -250) scale(1 .55) translate(0 250)"><polygon points="0.0,-440.0 30.0,-302.0 164.5,-345.0 60.0,-250.0 164.5,-155.0 30.0,-198.0 0.0,-60.0 -30.0,-198.0 -164.5,-155.0 -60.0,-250.0 -164.5,-345.0 -30.0,-302.0" fill="#000" stroke="#000" stroke-width="8" stroke-linejoin="round"/></g><path d="M0 -300 L10 -400" stroke="#000" stroke-width="30" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">STRAWBERRY</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 780)"><polygon points="-500,-870 -380,-750 -500,-630 -620,-750" fill="#fff"/><polygon points="-250,-870 -130,-750 -250,-630 -370,-750" fill="#D7262E"/><polygon points="0,-870 120,-750 0,-630 -120,-750" fill="#fff"/><polygon points="250,-870 370,-750 250,-630 130,-750" fill="#D7262E"/><polygon points="500,-870 620,-750 500,-630 380,-750" fill="#fff"/><polygon points="-500,-620 -380,-500 -500,-380 -620,-500" fill="#D7262E"/><polygon points="-250,-620 -130,-500 -250,-380 -370,-500" fill="#fff"/><polygon points="0,-620 120,-500 0,-380 -120,-500" fill="#D7262E"/><polygon points="250,-620 370,-500 250,-380 130,-500" fill="#fff"/><polygon points="500,-620 620,-500 500,-380 380,-500" fill="#D7262E"/><polygon points="-500,-370 -380,-250 -500,-130 -620,-250" fill="#fff"/><polygon points="-250,-370 -130,-250 -250,-130 -370,-250" fill="#D7262E"/><polygon points="0,-370 120,-250 0,-130 -120,-250" fill="#fff"/><polygon points="250,-370 370,-250 250,-130 130,-250" fill="#D7262E"/><polygon points="500,-370 620,-250 500,-130 380,-250" fill="#fff"/><polygon points="-500,-120 -380,0 -500,120 -620,0" fill="#D7262E"/><polygon points="-250,-120 -130,0 -250,120 -370,0" fill="#fff"/><polygon points="0,-120 120,0 0,120 -120,0" fill="#D7262E"/><polygon points="250,-120 370,0 250,120 130,0" fill="#fff"/><polygon points="500,-120 620,0 500,120 380,0" fill="#D7262E"/><polygon points="-500,130 -380,250 -500,370 -620,250" fill="#fff"/><polygon points="-250,130 -130,250 -250,370 -370,250" fill="#D7262E"/><polygon points="0,130 120,250 0,370 -120,250" fill="#fff"/><polygon points="250,130 370,250 250,370 130,250" fill="#D7262E"/><polygon points="500,130 620,250 500,370 380,250" fill="#fff"/><polygon points="-500,380 -380,500 -500,620 -620,500" fill="#D7262E"/><polygon points="-250,380 -130,500 -250,620 -370,500" fill="#fff"/><polygon points="0,380 120,500 0,620 -120,500" fill="#D7262E"/><polygon points="250,380 370,500 250,620 130,500" fill="#fff"/><polygon points="500,380 620,500 500,620 380,500" fill="#D7262E"/><polygon points="-500,630 -380,750 -500,870 -620,750" fill="#fff"/><polygon points="-250,630 -130,750 -250,870 -370,750" fill="#D7262E"/><polygon points="0,630 120,750 0,870 -120,750" fill="#fff"/><polygon points="250,630 370,750 250,870 130,750" fill="#D7262E"/><polygon points="500,630 620,750 500,870 380,750" fill="#fff"/></g><rect x="0" y="1235" width="1060" height="325" fill="#000"/><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">RED DIAMONDS</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Cherries. Tap to see the back: Red Hexagons">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#000" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#000"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#fff"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">CHERRIES</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><polygon points="140.0,0.0 70.0,121.2 -70.0,121.2 -140.0,0.0 -70.0,-121.2 70.0,-121.2" fill="#D7262E"/><polygon points="360.8,127.5 290.8,248.7 150.8,248.7 80.8,127.5 150.8,6.3 290.8,6.3" fill="#fff"/><polygon points="140.0,255.0 70.0,376.2 -70.0,376.2 -140.0,255.0 -70.0,133.8 70.0,133.8" fill="#fff"/><polygon points="-80.8,127.5 -150.8,248.7 -290.8,248.7 -360.8,127.5 -290.8,6.3 -150.8,6.3" fill="#fff"/><polygon points="-80.8,-127.5 -150.8,-6.3 -290.8,-6.3 -360.8,-127.5 -290.8,-248.7 -150.8,-248.7" fill="#fff"/><polygon points="140.0,-255.0 70.0,-133.8 -70.0,-133.8 -140.0,-255.0 -70.0,-376.2 70.0,-376.2" fill="#fff"/><polygon points="360.8,-127.5 290.8,-6.3 150.8,-6.3 80.8,-127.5 150.8,-248.7 290.8,-248.7" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">RED HEXAGONS</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Watermelon. Tap to see the back: Red Striped Circle">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M-420 -80 A420 420 0 0 0 420 -80 Z" fill="#000"/><path d="M-385 -80 A385 385 0 0 0 385 -80 Z" fill="#fff"/><path d="M-350 -80 A350 350 0 0 0 350 -80 Z" fill="#D7262E"/><ellipse cx="-200" cy="0" rx="15" ry="26" fill="#000"/><ellipse cx="-80" cy="20" rx="15" ry="26" fill="#000"/><ellipse cx="60" cy="20" rx="15" ry="26" fill="#000"/><ellipse cx="190" cy="0" rx="15" ry="26" fill="#000"/><ellipse cx="-130" cy="120" rx="15" ry="26" fill="#000"/><ellipse cx="0" cy="140" rx="15" ry="26" fill="#000"/><ellipse cx="130" cy="120" rx="15" ry="26" fill="#000"/><ellipse cx="-60" cy="210" rx="15" ry="26" fill="#000"/><ellipse cx="70" cy="210" rx="15" ry="26" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">WATERMELON</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><circle r="390" fill="#fff"/><circle r="350" fill="#000"/><clipPath id="rsb36"><circle r="320"/></clipPath><g clip-path="url(#rsb36)" transform="rotate(-40)"><rect x="-340" y="-340" width="35" height="680" fill="#D7262E"/><rect x="-270" y="-340" width="35" height="680" fill="#D7262E"/><rect x="-200" y="-340" width="35" height="680" fill="#D7262E"/><rect x="-130" y="-340" width="35" height="680" fill="#D7262E"/><rect x="-60" y="-340" width="35" height="680" fill="#D7262E"/><rect x="10" y="-340" width="35" height="680" fill="#D7262E"/><rect x="80" y="-340" width="35" height="680" fill="#D7262E"/><rect x="150" y="-340" width="35" height="680" fill="#D7262E"/><rect x="220" y="-340" width="35" height="680" fill="#D7262E"/><rect x="290" y="-340" width="35" height="680" fill="#D7262E"/></g></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff" textLength="860" lengthAdjust="spacingAndGlyphs">RED STRIPED CIRCLE</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Banana. Tap to see the back: Pomegranate">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-300 -260 L-260 -300 L-230 -250 Z" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+      <path d="M-250 -250 C-320 120 -60 330 330 260 C350 250 350 230 330 225 C40 220 -150 60 -190 -250 Z" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+      <path d="M-200 -150 C-200 80 -20 210 250 235" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">BANANA</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <polygon points="-95,-250 -70,-375 -25,-290 0,-395 25,-290 70,-375 95,-250" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+      <circle cx="0" cy="40" r="320" fill="#D7262E"/>
+      <ellipse cx="-150" cy="-60" rx="40" ry="80" transform="rotate(25 -150 -60)" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">POMEGRANATE</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Grapes. Tap to see the back: Lemon">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M0 -250 Q0 -330 50 -380" fill="none" stroke="#000" stroke-width="28" stroke-linecap="round"/><ellipse cx="-120" cy="-300" rx="110" ry="50" transform="rotate(20 -120 -300)" fill="#000"/><circle cx="-225" cy="-180" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="-75" cy="-180" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="75" cy="-180" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="225" cy="-180" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="-150" cy="-50" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="0" cy="-50" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="150" cy="-50" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="-225" cy="80" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="-75" cy="80" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="75" cy="80" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="225" cy="80" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="-150" cy="210" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="0" cy="210" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="150" cy="210" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="-75" cy="330" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/><circle cx="75" cy="330" r="82" fill="#D7262E" stroke="#fff" stroke-width="14"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">GRAPES</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-390 0 C-300 -260 300 -260 390 0 C300 260 -300 260 -390 0 Z" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+      <ellipse cx="-120" cy="-80" rx="110" ry="32" transform="rotate(-10 -120 -80)" fill="#000"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">LEMON</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Mango. Tap to see the back: Cherry Pattern">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M-60 -330 Q-40 -400 10 -420" fill="none" stroke="#000" stroke-width="28" stroke-linecap="round"/>
+      <ellipse cx="80" cy="-390" rx="100" ry="40" transform="rotate(-15 80 -390)" fill="#000"/>
+      <clipPath id="mgk39"><path d="M-40 -330 C220 -340 330 -80 290 140 C250 330 40 400 -110 330 C-280 250 -300 50 -230 -120 C-180 -250 -120 -330 -40 -330 Z"/></clipPath>
+      <path d="M-40 -330 C220 -340 330 -80 290 140 C250 330 40 400 -110 330 C-280 250 -300 50 -230 -120 C-180 -250 -120 -330 -40 -330 Z" fill="#000"/>
+      <circle cx="260" cy="-260" r="260" fill="#D7262E" clip-path="url(#mgk39)"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">MANGO</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.85)"><g transform="translate(-280 -450) rotate(-12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(0 -450) rotate(12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(280 -450) rotate(-12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(-280 -150) rotate(12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(0 -150) rotate(-12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(280 -150) rotate(12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(-280 150) rotate(-12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(0 150) rotate(12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(280 150) rotate(-12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(-280 450) rotate(12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(0 450) rotate(-12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(280 450) rotate(12) scale(0.33)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff" textLength="860" lengthAdjust="spacingAndGlyphs">CHERRY PATTERN</text>
+
+</svg></span></button>
+<button class="flip" type="button" aria-pressed="false" aria-label="Apple Pattern. Tap to see the back: Mixed Fruits">
+  <span class="face front"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.85)"><g transform="translate(-280 -450) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(0 -450) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#000"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(280 -450) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(-280 -150) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#000"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(0 -150) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(280 -150) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#000"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(-280 150) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(0 150) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#000"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(280 150) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(-280 450) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#000"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(0 450) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><g transform="translate(280 450) rotate(0) scale(0.32)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#000"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">APPLE PATTERN</text>
+
+</svg></span><span class="face back"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.85)"><g transform="translate(-280 -450) rotate(0) scale(0.3)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#fff" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#fff"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#000"/></g><g transform="translate(0 -450) rotate(0) scale(0.3)">
+      <path d="M-300 -260 L-260 -300 L-230 -250 Z" fill="#fff" stroke="#fff" stroke-width="30" stroke-linejoin="round"/>
+      <path d="M-250 -250 C-320 120 -60 330 330 260 C350 250 350 230 330 225 C40 220 -150 60 -190 -250 Z" fill="#fff" stroke="#fff" stroke-width="30" stroke-linejoin="round"/>
+      <path d="M-200 -150 C-200 80 -20 210 250 235" fill="none" stroke="#000" stroke-width="16" stroke-linecap="round"/></g><g transform="translate(280 -450) rotate(0) scale(0.3)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(-280 -150) rotate(0) scale(0.3)">
+      <path d="M-390 0 C-300 -260 300 -260 390 0 C300 260 -300 260 -390 0 Z" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+      <ellipse cx="-120" cy="-80" rx="110" ry="32" transform="rotate(-10 -120 -80)" fill="#000"/></g><g transform="translate(0 -150) rotate(0) scale(0.3)"><path d="M0 380 C-200 300 -330 50 -300 -120 C-280 -230 -150 -250 0 -230 C150 -250 280 -230 300 -120 C330 50 200 300 0 380 Z" fill="#D7262E"/><ellipse cx="-170" cy="-120" rx="11" ry="19" fill="#000"/><ellipse cx="-60" cy="-140" rx="11" ry="19" fill="#000"/><ellipse cx="60" cy="-140" rx="11" ry="19" fill="#000"/><ellipse cx="170" cy="-120" rx="11" ry="19" fill="#000"/><ellipse cx="-200" cy="10" rx="11" ry="19" fill="#000"/><ellipse cx="-90" cy="-20" rx="11" ry="19" fill="#000"/><ellipse cx="20" cy="-30" rx="11" ry="19" fill="#000"/><ellipse cx="130" cy="-20" rx="11" ry="19" fill="#000"/><ellipse cx="220" cy="10" rx="11" ry="19" fill="#000"/><ellipse cx="-140" cy="130" rx="11" ry="19" fill="#000"/><ellipse cx="-30" cy="110" rx="11" ry="19" fill="#000"/><ellipse cx="80" cy="120" rx="11" ry="19" fill="#000"/><ellipse cx="180" cy="140" rx="11" ry="19" fill="#000"/><ellipse cx="-60" cy="240" rx="11" ry="19" fill="#000"/><ellipse cx="50" cy="240" rx="11" ry="19" fill="#000"/><ellipse cx="0" cy="320" rx="11" ry="19" fill="#000"/><g transform="translate(0 -250) scale(1 .55) translate(0 250)"><polygon points="0.0,-440.0 30.0,-302.0 164.5,-345.0 60.0,-250.0 164.5,-155.0 30.0,-198.0 0.0,-60.0 -30.0,-198.0 -164.5,-155.0 -60.0,-250.0 -164.5,-345.0 -30.0,-302.0" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/></g><path d="M0 -300 L10 -400" stroke="#fff" stroke-width="30" stroke-linecap="round"/></g><g transform="translate(280 -150) rotate(0) scale(0.3)"><path d="M0 -250 Q0 -330 50 -380" fill="none" stroke="#fff" stroke-width="28" stroke-linecap="round"/><ellipse cx="-120" cy="-300" rx="110" ry="50" transform="rotate(20 -120 -300)" fill="#fff"/><circle cx="-225" cy="-180" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="-75" cy="-180" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="75" cy="-180" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="225" cy="-180" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="-150" cy="-50" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="0" cy="-50" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="150" cy="-50" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="-225" cy="80" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="-75" cy="80" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="75" cy="80" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="225" cy="80" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="-150" cy="210" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="0" cy="210" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="150" cy="210" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="-75" cy="330" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/><circle cx="75" cy="330" r="82" fill="#D7262E" stroke="#000" stroke-width="14"/></g><g transform="translate(-280 150) rotate(0) scale(0.3)"><path d="M-420 -80 A420 420 0 0 0 420 -80 Z" fill="#fff"/><path d="M-385 -80 A385 385 0 0 0 385 -80 Z" fill="#000"/><path d="M-350 -80 A350 350 0 0 0 350 -80 Z" fill="#D7262E"/><ellipse cx="-200" cy="0" rx="15" ry="26" fill="#fff"/><ellipse cx="-80" cy="20" rx="15" ry="26" fill="#fff"/><ellipse cx="60" cy="20" rx="15" ry="26" fill="#fff"/><ellipse cx="190" cy="0" rx="15" ry="26" fill="#fff"/><ellipse cx="-130" cy="120" rx="15" ry="26" fill="#fff"/><ellipse cx="0" cy="140" rx="15" ry="26" fill="#fff"/><ellipse cx="130" cy="120" rx="15" ry="26" fill="#fff"/><ellipse cx="-60" cy="210" rx="15" ry="26" fill="#fff"/><ellipse cx="70" cy="210" rx="15" ry="26" fill="#fff"/></g><g transform="translate(0 150) rotate(0) scale(0.3)">
+      <polygon points="-95,-250 -70,-375 -25,-290 0,-395 25,-290 70,-375 95,-250" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+      <circle cx="0" cy="40" r="320" fill="#D7262E"/>
+      <ellipse cx="-150" cy="-60" rx="40" ry="80" transform="rotate(25 -150 -60)" fill="#000"/></g><g transform="translate(280 150) rotate(0) scale(0.3)">
+      <path d="M-60 -330 Q-40 -400 10 -420" fill="none" stroke="#fff" stroke-width="28" stroke-linecap="round"/>
+      <ellipse cx="80" cy="-390" rx="100" ry="40" transform="rotate(-15 80 -390)" fill="#fff"/>
+      <clipPath id="mgb40x"><path d="M-40 -330 C220 -340 330 -80 290 140 C250 330 40 400 -110 330 C-280 250 -300 50 -230 -120 C-180 -250 -120 -330 -40 -330 Z"/></clipPath>
+      <path d="M-40 -330 C220 -340 330 -80 290 140 C250 330 40 400 -110 330 C-280 250 -300 50 -230 -120 C-180 -250 -120 -330 -40 -330 Z" fill="#fff"/>
+      <circle cx="260" cy="-260" r="260" fill="#D7262E" clip-path="url(#mgb40x)"/></g><g transform="translate(-280 450) rotate(0) scale(0.3)">
+      <path d="M-150 60 Q-120 -150 40 -290 M140 110 Q120 -120 40 -290" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-310" rx="110" ry="45" transform="rotate(-20 140 -310)" fill="#fff"/>
+      <circle cx="-150" cy="180" r="145" fill="#D7262E"/><circle cx="140" cy="230" r="145" fill="#D7262E"/>
+      <ellipse cx="-200" cy="130" rx="25" ry="42" transform="rotate(30 -200 130)" fill="#000"/><ellipse cx="90" cy="180" rx="25" ry="42" transform="rotate(30 90 180)" fill="#000"/></g><g transform="translate(0 450) rotate(0) scale(0.3)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#fff" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#fff"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#000"/></g><g transform="translate(280 450) rotate(0) scale(0.3)"><path d="M0 380 C-200 300 -330 50 -300 -120 C-280 -230 -150 -250 0 -230 C150 -250 280 -230 300 -120 C330 50 200 300 0 380 Z" fill="#D7262E"/><ellipse cx="-170" cy="-120" rx="11" ry="19" fill="#000"/><ellipse cx="-60" cy="-140" rx="11" ry="19" fill="#000"/><ellipse cx="60" cy="-140" rx="11" ry="19" fill="#000"/><ellipse cx="170" cy="-120" rx="11" ry="19" fill="#000"/><ellipse cx="-200" cy="10" rx="11" ry="19" fill="#000"/><ellipse cx="-90" cy="-20" rx="11" ry="19" fill="#000"/><ellipse cx="20" cy="-30" rx="11" ry="19" fill="#000"/><ellipse cx="130" cy="-20" rx="11" ry="19" fill="#000"/><ellipse cx="220" cy="10" rx="11" ry="19" fill="#000"/><ellipse cx="-140" cy="130" rx="11" ry="19" fill="#000"/><ellipse cx="-30" cy="110" rx="11" ry="19" fill="#000"/><ellipse cx="80" cy="120" rx="11" ry="19" fill="#000"/><ellipse cx="180" cy="140" rx="11" ry="19" fill="#000"/><ellipse cx="-60" cy="240" rx="11" ry="19" fill="#000"/><ellipse cx="50" cy="240" rx="11" ry="19" fill="#000"/><ellipse cx="0" cy="320" rx="11" ry="19" fill="#000"/><g transform="translate(0 -250) scale(1 .55) translate(0 250)"><polygon points="0.0,-440.0 30.0,-302.0 164.5,-345.0 60.0,-250.0 164.5,-155.0 30.0,-198.0 0.0,-60.0 -30.0,-198.0 -164.5,-155.0 -60.0,-250.0 -164.5,-345.0 -30.0,-302.0" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/></g><path d="M0 -300 L10 -400" stroke="#fff" stroke-width="30" stroke-linecap="round"/></g></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">MIXED FRUITS</text>
+
+</svg></span></button>
+</div>
+    <div class="deck-foot">
+      <span id="deck-count">Showing the fronts of 8 Patterns cards.</span>
+      <button class="linkbtn" type="button" id="flip-all">Flip all eight</button>
+    </div>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-title">
+  <div class="wrap split">
+    <div class="copycol">
+      <span class="eyebrow">How to use</span>
+      <h2 id="how-title">A few calm minutes, many times a day.</h2>
+      <ol class="steps">
+        <li><div><b>Hold it close</b><span>Show one card 20–30 cm from your baby's face while they are calm and awake.</span></div></li>
+        <li><div><b>Move it slowly</b><span>Glide the card from side to side and say its name.</span></div></li>
+        <li><div><b>Prop it up for tummy time</b><span>Stand a few cards in front of your baby to give them something to lift their head for.</span></div></li>
+        <li><div><b>Follow your baby</b><span>Stop when they look away or fuss, and try again later. Short is good.</span></div></li>
+      </ol>
+    </div>
+    <img src="img/ai-howto.jpg" alt="A parent holds a happy-face card above a baby lying on a blanket" width="1200" height="1200" loading="lazy">
+  </div>
+</section>
+
+<section class="specs" aria-labelledby="spec-title">
+  <div class="wrap">
+    <span class="eyebrow">The details</span>
+    <h2 id="spec-title" style="margin-top:12px">Made to be held, propped and played with.</h2>
+    <div class="spec-grid">
+      <div class="spec"><span class="v">10 × 15 cm</span><span class="k">Card size, big enough to fill a newborn's view</span></div>
+      <div class="spec"><span class="v">40 / 80</span><span class="k">Double-sided cards / designs</span></div>
+      <div class="spec"><span class="v">5 sets</span><span class="k">Patterns, Animals, Familiar Things, Shapes, Fruits &amp; Red</span></div>
+      <div class="spec"><span class="v">0–6 mo</span><span class="k">From the first weeks through early tummy time</span></div>
+    </div>
+    <div class="inbox">
+      <img src="img/ai-tummy.jpg" alt="A smiling baby on their tummy looking at propped-up cards" width="1200" height="1200" loading="lazy">
+      <div class="copycol">
+        <h3 style="font-size:1.6rem">In the box</h3>
+        <ul class="ticks">
+          <li><span><b>40 thick, matte cards</b> with rounded corners and a low-glare finish</span></li>
+          <li><span><b>80 designs</b>, one on each side, every one named</span></li>
+          <li><span><b>A sturdy storage box</b> that keeps the deck together</span></li>
+          <li><span><b>How-to-use tips</b> printed on the back of the box</span></li>
+        </ul>
+        <p class="note" style="margin-top:8px">For use with an adult. The cards are not a chewing or teething toy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq">
+    <div class="copycol">
+      <span class="eyebrow">Questions</span>
+      <h2 id="faq-title">Good to know</h2>
+    </div>
+    <div>
+      <details><summary>From what age can we use the cards?</summary><p>From the first weeks. Start with the simple black-and-white patterns and faces, then bring in the Fruits &amp; Red set as your baby grows.</p></details>
+      <details><summary>How long should each session be?</summary><p>A few minutes is plenty. Watch your baby: when they look away, yawn or fuss, they have had enough for now.</p></details>
+      <details><summary>Why are there names on the cards?</summary><p>So you can talk about each picture. Hearing your voice name what they are looking at is part of the play.</p></details>
+      <details><summary>Can my baby hold or chew them?</summary><p>No. The cards are for you to hold and show. Keep them out of reach when you are not playing together, and put away any card that gets damaged.</p></details>
+      <details><summary>Does it make a good gift?</summary><p>Yes. The boxed set is a popular pick for baby showers, naming ceremonies and first visits.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="order" aria-labelledby="order-title">
+  <div class="wrap">
+    <div class="card">
+      <div class="copycol">
+        <span class="eyebrow" style="color:inherit;opacity:.7">MOM IN · Little Focus</span>
+        <h2 id="order-title">Launching soon.</h2>
+        <p>The first sets of Little Focus are being printed now. Online ordering opens here at launch.</p>
+        <div class="actions"><a class="btn" href="#deck">See all 80 designs</a></div>
+      </div>
+      <div class="mini" aria-hidden="true"><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M0 -170 Q10 -280 60 -330" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round"/>
+      <ellipse cx="140" cy="-280" rx="105" ry="45" transform="rotate(-30 140 -280)" fill="#000"/>
+      <path d="M0 -170 C-120 -260 -380 -230 -380 30 C-380 260 -200 380 -100 380 C-40 380 -30 350 0 350 C30 350 40 380 100 380 C200 380 380 260 380 30 C380 -230 120 -260 0 -170 Z" fill="#D7262E"/>
+      <ellipse cx="-210" cy="-10" rx="45" ry="95" transform="rotate(20 -210 -10)" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">APPLE</text>
+
+</svg></span><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#000"/>
+<g transform="translate(530 690) scale(0.9)"><path d="M10.0 6.8 L10.3 7.7 L10.7 8.6 L10.9 9.6 L11.1 10.6 L11.2 11.6 L11.3 12.6 L11.3 13.7 L11.2 14.8 L11.1 15.9 L10.9 17.0 L10.6 18.1 L10.3 19.2 L9.8 20.3 L9.3 21.4 L8.8 22.5 L8.1 23.6 L7.4 24.7 L6.6 25.8 L5.7 26.8 L4.8 27.8 L3.8 28.8 L2.7 29.7 L1.6 30.6 L0.3 31.4 L-0.9 32.2 L-2.3 33.0 L-3.7 33.7 L-5.2 34.3 L-6.7 34.8 L-8.2 35.3 L-9.9 35.8 L-11.5 36.1 L-13.2 36.4 L-15.0 36.6 L-16.8 36.7 L-18.6 36.7 L-20.4 36.6 L-22.3 36.5 L-24.2 36.2 L-26.1 35.9 L-28.0 35.4 L-29.9 34.9 L-31.9 34.2 L-33.8 33.5 L-35.7 32.7 L-37.6 31.7 L-39.4 30.7 L-41.3 29.6 L-43.1 28.4 L-44.9 27.0 L-46.7 25.6 L-48.4 24.1 L-50.0 22.4 L-51.6 20.7 L-53.2 18.9 L-54.7 17.0 L-56.1 15.0 L-57.4 12.9 L-58.7 10.8 L-59.9 8.5 L-61.0 6.2 L-62.0 3.8 L-62.9 1.4 L-63.7 -1.2 L-64.4 -3.8 L-65.0 -6.4 L-65.5 -9.1 L-65.9 -11.9 L-66.1 -14.7 L-66.3 -17.5 L-66.3 -20.4 L-66.2 -23.3 L-65.9 -26.2 L-65.6 -29.2 L-65.1 -32.1 L-64.5 -35.1 L-63.7 -38.0 L-62.8 -41.0 L-61.8 -43.9 L-60.6 -46.9 L-59.3 -49.8 L-57.8 -52.7 L-56.3 -55.5 L-54.6 -58.3 L-52.7 -61.0 L-50.7 -63.7 L-48.6 -66.3 L-46.4 -68.9 L-44.0 -71.4 L-41.5 -73.8 L-38.9 -76.1 L-36.2 -78.3 L-33.3 -80.5 L-30.3 -82.5 L-27.3 -84.4 L-24.1 -86.2 L-20.8 -87.9 L-17.4 -89.4 L-14.0 -90.9 L-10.4 -92.1 L-6.8 -93.3 L-3.1 -94.3 L0.7 -95.2 L4.6 -95.9 L8.5 -96.4 L12.4 -96.8 L16.4 -97.0 L20.4 -97.1 L24.5 -96.9 L28.6 -96.7 L32.7 -96.2 L36.8 -95.6 L40.9 -94.8 L45.0 -93.8 L49.1 -92.6 L53.2 -91.3 L57.2 -89.8 L61.2 -88.1 L65.2 -86.2 L69.1 -84.1 L72.9 -81.9 L76.7 -79.5 L80.4 -76.9 L84.0 -74.2 L87.6 -71.3 L91.0 -68.2 L94.3 -65.0 L97.5 -61.6 L100.6 -58.0 L103.5 -54.3 L106.4 -50.5 L109.0 -46.5 L111.6 -42.4 L113.9 -38.2 L116.1 -33.8 L118.2 -29.3 L120.0 -24.7 L121.7 -20.0 L123.2 -15.3 L124.6 -10.4 L125.7 -5.4 L126.6 -0.4 L127.3 4.7 L127.8 9.8 L128.1 15.0 L128.2 20.3 L128.1 25.5 L127.8 30.8 L127.2 36.1 L126.4 41.5 L125.4 46.8 L124.2 52.0 L122.8 57.3 L121.1 62.5 L119.2 67.7 L117.1 72.9 L114.7 77.9 L112.2 83.0 L109.4 87.9 L106.4 92.7 L103.2 97.4 L99.8 102.1 L96.1 106.6 L92.3 111.0 L88.3 115.2 L84.1 119.3 L79.7 123.2 L75.1 127.0 L70.3 130.6 L65.4 134.1 L60.3 137.3 L55.1 140.4 L49.7 143.2 L44.2 145.9 L38.5 148.3 L32.7 150.5 L26.8 152.5 L20.8 154.2 L14.7 155.7 L8.5 157.0 L2.2 158.0 L-4.1 158.8 L-10.5 159.3 L-17.0 159.6 L-23.5 159.6 L-30.0 159.3 L-36.5 158.7 L-43.0 157.9 L-49.6 156.9 L-56.1 155.5 L-62.5 153.9 L-69.0 152.0 L-75.4 149.8 L-81.7 147.4 L-87.9 144.7 L-94.1 141.8 L-100.2 138.5 L-106.1 135.1 L-112.0 131.3 L-117.7 127.3 L-123.2 123.1 L-128.7 118.6 L-133.9 113.9 L-139.0 108.9 L-143.9 103.8 L-148.6 98.4 L-153.1 92.8 L-157.4 87.0 L-161.5 81.0 L-165.3 74.8 L-168.9 68.4 L-172.3 61.9 L-175.4 55.2 L-178.2 48.3 L-180.8 41.3 L-183.1 34.2 L-185.1 27.0 L-186.9 19.7 L-188.3 12.2 L-189.4 4.7 L-190.3 -2.9 L-190.8 -10.5 L-191.1 -18.2 L-191.0 -26.0 L-190.6 -33.7 L-189.9 -41.5 L-188.8 -49.3 L-187.5 -57.0 L-185.8 -64.7 L-183.8 -72.4 L-181.5 -80.0 L-178.9 -87.6 L-176.0 -95.0 L-172.7 -102.4 L-169.2 -109.7 L-165.3 -116.8 L-161.1 -123.8 L-156.7 -130.7 L-151.9 -137.4 L-146.9 -143.9 L-141.6 -150.3 L-136.0 -156.4 L-130.1 -162.3 L-124.0 -168.1 L-117.6 -173.6 L-111.0 -178.8 L-104.2 -183.8 L-97.1 -188.5 L-89.8 -193.0 L-82.3 -197.2 L-74.7 -201.1 L-66.8 -204.7 L-58.8 -208.0 L-50.6 -210.9 L-42.3 -213.6 L-33.9 -215.9 L-25.3 -217.9 L-16.6 -219.5 L-7.9 -220.8 L1.0 -221.8 L9.9 -222.3 L18.8 -222.6 L27.8 -222.4 L36.8 -221.9 L45.8 -221.1 L54.8 -219.9 L63.8 -218.3 L72.7 -216.3 L81.6 -214.0 L90.4 -211.3 L99.2 -208.2 L107.8 -204.8 L116.3 -201.0 L124.7 -196.9 L132.9 -192.4 L141.0 -187.6 L148.9 -182.4 L156.6 -176.9 L164.1 -171.1 L171.4 -165.0 L178.4 -158.5 L185.3 -151.8 L191.8 -144.7 L198.1 -137.4 L204.1 -129.8 L209.9 -121.9 L215.3 -113.8 L220.4 -105.5 L225.2 -96.9 L229.6 -88.1 L233.7 -79.1 L237.5 -69.9 L240.9 -60.6 L243.9 -51.1 L246.5 -41.4 L248.8 -31.6 L250.7 -21.7 L252.1 -11.7 L253.2 -1.6 L253.9 8.5 L254.1 18.7 L254.0 29.0 L253.4 39.2 L252.4 49.5 L251.0 59.7 L249.2 69.9 L247.0 80.1 L244.3 90.2 L241.3 100.2 L237.8 110.1 L233.9 119.9 L229.7 129.6 L225.0 139.1 L219.9 148.4 L214.5 157.6 L208.6 166.5 L202.4 175.2 L195.8 183.7 L188.9 192.0 L181.6 200.0 L174.0 207.7 L166.0 215.2 L157.7 222.3 L149.2 229.1 L140.3 235.6 L131.1 241.7 L121.7 247.5 L112.1 252.9 L102.2 257.9 L92.0 262.5 L81.7 266.8 L71.2 270.6 L60.5 274.0 L49.6 277.0 L38.6 279.6 L27.5 281.7 L16.2 283.4 L4.9 284.6 L-6.5 285.4 L-18.0 285.7 L-29.5 285.6 L-41.0 284.9 L-52.5 283.9 L-64.0 282.3 L-75.4 280.3 L-86.8 277.9 L-98.1 274.9 L-109.3 271.5 L-120.4 267.7 L-131.4 263.4 L-142.2 258.6 L-152.9 253.4 L-163.3 247.8 L-173.6 241.7 L-183.6 235.2 L-193.4 228.3 L-202.9 220.9 L-212.1 213.2 L-221.1 205.1 L-229.7 196.6 L-238.0 187.8 L-246.0 178.6 L-253.6 169.1 L-260.9 159.2 L-267.7 149.0 L-274.2 138.6 L-280.3 127.8 L-285.9 116.8 L-291.1 105.6 L-295.9 94.1 L-300.2 82.4 L-304.0 70.5 L-307.4 58.5 L-310.3 46.2 L-312.7 33.9 L-314.6 21.4 L-316.0 8.8 L-316.9 -3.8 L-317.3 -16.5 L-317.2 -29.3 L-316.5 -42.0 L-315.4 -54.8 L-313.8 -67.5 L-311.6 -80.2 L-308.9 -92.9 L-305.7 -105.4 L-302.0 -117.8 L-297.8 -130.1 L-293.1 -142.3 L-287.8 -154.3 L-282.1 -166.1 L-275.9 -177.7 L-269.3 -189.0 L-262.2 -200.1 L-254.6 -211.0 L-246.5 -221.5 L-238.0 -231.8 L-229.1 -241.7 L-219.8 -251.3 L-210.1 -260.5 L-200.0 -269.3 L-189.5 -277.8 L-178.7 -285.8 L-167.5 -293.4 L-156.0 -300.6 L-144.2 -307.3 L-132.1 -313.6 L-119.8 -319.4 L-107.1 -324.7 L-94.3 -329.5 L-81.2 -333.8 L-68.0 -337.5 L-54.6 -340.8 L-41.0 -343.5 L-27.3 -345.7 L-13.5 -347.3 L0.4 -348.4 L14.4 -348.9 L28.4 -348.8 L42.4 -348.2 L56.4 -347.0 L70.4 -345.3 L84.4 -343.0 L98.3 -340.1 L112.0 -336.7 L125.7 -332.7 L139.2 -328.1 L152.6 -323.0 L165.7 -317.4 L178.7 -311.2 L191.4 -304.5 L203.9 -297.2 L216.1 -289.5 L228.0 -281.3 L239.6 -272.5 L250.9 -263.3 L261.8 -253.6 L272.3 -243.5 L282.5 -232.9 L292.2 -221.9 L301.5 -210.5 L310.3 -198.7 L318.7 -186.6 L326.7 -174.0 L334.1 -161.2 L341.0 -148.0 L347.4 -134.6 L353.3 -120.8 L358.6 -106.8 L363.4 -92.6 L367.6 -78.2 L371.2 -63.5 L374.2 -48.8 L376.7 -33.8 L378.5 -18.8 L379.8 -3.6" fill="none" stroke="#fff" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#fff">SPIRAL</text>
+
+</svg></span><span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="30 30 1000 1500">
+<rect width="1060" height="1560" fill="#fff"/>
+<g transform="translate(530 690) scale(0.9)">
+      <path d="M290 20 Q350 60 345 130" fill="none" stroke="#000" stroke-width="22" stroke-linecap="round"/>
+      <rect x="-110" y="120" width="95" height="200" rx="30" fill="#000"/>
+      <rect x="150" y="120" width="95" height="200" rx="30" fill="#000"/>
+      <ellipse cx="80" cy="40" rx="240" ry="175" fill="#000"/>
+      <path d="M-300 -40 Q-390 120 -330 250" fill="none" stroke="#000" stroke-width="82" stroke-linecap="round"/>
+      <circle cx="-190" cy="-90" r="165" fill="#000"/>
+      <path d="M-140 -190 Q-10 -230 -15 -60 Q-20 90 -140 60" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="-255" cy="-130" r="24" fill="#fff"/></g><text x="530" y="1400" text-anchor="middle" font-family="Fredoka,'Arial Rounded MT Bold',Arial" font-weight="bold" font-size="86" letter-spacing="5" fill="#000">ELEPHANT</text>
+
+</svg></span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MOM IN · Little Focus. Made in India.</span>
+    <span>High-contrast baby cards for 0–6 months.</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('.tab')];
+  const count = document.getElementById('deck-count');
+  const flipAll = document.getElementById('flip-all');
+  const active = () => document.querySelector('.deck:not([hidden])');
+  const update = () => {
+    const panel = active();
+    const name = document.querySelector('.tab[aria-selected="true"]').textContent;
+    const flipped = panel.querySelectorAll('.flip[aria-pressed="true"]').length;
+    count.textContent = flipped === 0 ? 'Showing the fronts of 8 ' + name + ' cards.'
+      : flipped === 8 ? 'Showing the backs of 8 ' + name + ' cards.'
+      : flipped + ' of 8 ' + name + ' cards flipped.';
+    flipAll.textContent = flipped === 8 ? 'Flip all back' : 'Flip all eight';
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => {
+      tabs.forEach(o => { o.setAttribute('aria-selected', o === t); document.getElementById(o.getAttribute('aria-controls')).hidden = o !== t; });
+      update();
+    });
+    t.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); n.click(); }
+    });
+  });
+  document.querySelectorAll('.flip').forEach(b => b.addEventListener('click', () => {
+    b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true'); update();
+  }));
+  flipAll.addEventListener('click', () => {
+    const cards = [...active().querySelectorAll('.flip')];
+    const to = !cards.every(c => c.getAttribute('aria-pressed') === 'true');
+    cards.forEach(c => c.setAttribute('aria-pressed', to)); update();
+  });
+})();
+</script>
+
+</body>
+</html>
